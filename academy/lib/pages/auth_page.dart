@@ -15,7 +15,7 @@ class AuthPage extends StatelessWidget {
         builder: (context, snapshot) {
           // kullanici girisi basarili
           if (snapshot.hasData) {
-            return ForumScreen();
+            return HomePage();
           }
           //kullanici girisi basarisiz
           else {
