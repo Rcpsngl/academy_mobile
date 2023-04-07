@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class ForumScreen extends StatefulWidget {
+  const ForumScreen({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _ForumScreenState createState() => _ForumScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _ForumScreenState extends State<ForumScreen> {
 // text fields' controllers
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _text = TextEditingController();

@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                 Container(
                     width: 180,
                     height: 180,
-                    child: Image.asset("lib/images/academy.png")),
+                    child: Image.asset("lib/assets/images/academy.png")),
 
                 const SizedBox(height: 20),
 
@@ -101,13 +101,22 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 10),
 
                 // sifremi unuttum
+
+                const SizedBox(height: 25),
+
+                // giris yap button
+                MyButton(
+                  text: 'Giriş Yap',
+                  onTap: signUserIn,
+                ),
+                SizedBox(height: 10),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Center(
-                        child: TextButton(
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        TextButton(
                           child: Text('Şifremi Unuttum',
                               style: TextStyle(color: Colors.grey[600])),
                           onPressed: () {
@@ -120,17 +129,9 @@ class _LoginPageState extends State<LoginPage> {
                                 )));
                           },
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-
-                const SizedBox(height: 25),
-
-                // giris yap button
-                MyButton(
-                  text: 'Giriş Yap',
-                  onTap: signUserIn,
                 ),
 
                 const SizedBox(height: 50),
@@ -141,7 +142,7 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       Expanded(
                         child: Divider(
-                          thickness: 0.5,
+                          thickness: 1,
                           color: Colors.grey[400],
                         ),
                       ),

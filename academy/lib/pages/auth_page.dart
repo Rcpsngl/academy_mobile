@@ -1,7 +1,7 @@
 import 'package:academy/pages/login_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'home_page.dart';
+import 'forum_screen.dart';
 import 'login_or_register_page.dart';
 
 class AuthPage extends StatelessWidget {
@@ -15,7 +15,7 @@ class AuthPage extends StatelessWidget {
         builder: (context, snapshot) {
           // kullanici girisi basarili
           if (snapshot.hasData) {
-            return HomePage();
+            return ForumScreen();
           }
           //kullanici girisi basarisiz
           else {
