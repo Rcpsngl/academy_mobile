@@ -4,6 +4,7 @@ import 'package:academy/pages/auth_page.dart';
 import 'package:academy/pages/forum_screen.dart';
 import 'package:academy/pages/login_or_register_page.dart';
 import 'package:academy/pages/register_page.dart';
+import 'package:academy/screens/etkinlik_screen.dart';
 import 'package:academy/screens/featured_screen.dart';
 import 'package:academy/screens/profile_screen.dart';
 //import 'package:academy/screens/profile_screen.dart';
@@ -45,6 +46,7 @@ class MyApp extends StatelessWidget {
         "/featuredScreen": (context) => FeaturedScreen(),
         "/settingsScreen": (context) => SettingsScreen(),
         "/profileScreen": (context) => ProfileScreen(),
+        "/etkinlikScreen": (context) => EtkinlikScreen(),
       },
       debugShowCheckedModeBanner: false,
       home: BaseScreen(),

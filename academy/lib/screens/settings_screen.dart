@@ -1,9 +1,8 @@
+import 'package:academy/widgets/bottom_nav_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-import '../constants/color.dart';
-import '../constants/icons.dart';
-import '../constants/size.dart';
 import '../models/setting.dart';
 import '../widgets/avatar_card.dart';
 import '../widgets/setting_tile.dart';
@@ -17,12 +16,6 @@ class SettingsScreen extends StatefulWidget {
 
 class _SettingsScreenState extends State<SettingsScreen> {
   int _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,67 +60,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
           ),
         ),
-      ),
-      bottomNavigationBar: SizedBox(
-        height: 100,
-        child: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            selectedItemColor: kPrimaryColor,
-            backgroundColor: Colors.white,
-            elevation: 0,
-            items: [
-              BottomNavigationBarItem(
-                activeIcon: Image.asset(
-                  icHome,
-                  height: kBottomNavigationBarItemSize,
-                ),
-                icon: Image.asset(
-                  icactHome,
-                  height: kBottomNavigationBarItemSize,
-                ),
-                label: "Anasayfa",
-              ),
-              BottomNavigationBarItem(
-                activeIcon: Image.asset(
-                  icPerson,
-                  height: kBottomNavigationBarItemSize,
-                ),
-                icon: Image.asset(
-                  icdeactivePerson,
-                  height: kBottomNavigationBarItemSize,
-                ),
-                label: "Profil",
-              ),
-              BottomNavigationBarItem(
-                activeIcon: Image.asset(
-                  icSetting,
-                  height: kBottomNavigationBarItemSize,
-                ),
-                icon: Image.asset(
-                  icSettingOutlined,
-                  height: kBottomNavigationBarItemSize,
-                ),
-                label: "Ayarlar",
-              ),
-            ],
-            currentIndex: _selectedIndex,
-            onTap: (int index) {
-              setState(() {
-                _selectedIndex = index;
-              });
-              switch (index) {
-                case 0:
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, '/baseScreen', (Route<dynamic> route) => false);
-                  break;
-                case 1:
-                  Navigator.pushNamed(context, '/profileScreen');
-                  break;
-                case 2:
-                  Navigator.pushNamed(context, '/settingsScreen');
-                  break;
-              }
-            }),
       ),
     );
   }

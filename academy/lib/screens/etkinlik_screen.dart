@@ -1,17 +1,20 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../data/data.dart';
 import '../models/data_model.dart';
+import '../models/event_type_model.dart';
+import '../models/events_model.dart';
 
-class EtkinlikHomeScreen extends StatefulWidget {
+class EtkinlikScreen extends StatefulWidget {
   @override
-  _EtkinlikHomeScreenState createState() => _EtkinlikHomeScreenState();
+  _EtkinlikScreenState createState() => _EtkinlikScreenState();
 }
 
-class _EtkinlikHomeScreenState extends State<EtkinlikHomeScreen> {
-  List<DateModel> dates = List<DateModel>();
-  List<EventTypeModel> eventsType = List();
-  List<EventsModel> events = List<EventsModel>();
+class _EtkinlikScreenState extends State<EtkinlikScreen> {
+  List<DateModel> dates = <DateModel>[];
+  List<EventTypeModel> eventsType = [];
+  List<EventsModel> events = <EventsModel>[];
 
   String todayDateIs = "12";
 
@@ -27,6 +30,7 @@ class _EtkinlikHomeScreenState extends State<EtkinlikHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Container(
         child: Stack(
           children: <Widget>[
@@ -42,8 +46,8 @@ class _EtkinlikHomeScreenState extends State<EtkinlikHomeScreen> {
                     Row(
                       children: <Widget>[
                         Image.asset(
-                          "assets/logo.png",
-                          height: 28,
+                          "lib/assets/images/academy.png",
+                          height: 48,
                         ),
                         SizedBox(
                           width: 8,
@@ -51,31 +55,34 @@ class _EtkinlikHomeScreenState extends State<EtkinlikHomeScreen> {
                         Row(
                           children: <Widget>[
                             Text(
-                              "UVE",
+                              "OUA KEŞFET",
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 22,
-                                  fontWeight: FontWeight.w800),
+                                  fontWeight: FontWeight.w800,
+                                  fontFamily: 'Poppins'),
                             ),
-                            Text(
-                              "UVE",
-                              style: TextStyle(
-                                  color: Color(0xffFCCD00),
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.w800),
-                            )
                           ],
                         ),
+                        SizedBox(width: 34),
+                        IconButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            icon: Icon(
+                              CupertinoIcons.return_icon,
+                              color: Colors.white,
+                            )),
                         Spacer(),
                         Image.asset(
-                          "assets/notify.png",
+                          "lib/assets/images/notify.png",
                           height: 22,
                         ),
                         SizedBox(
                           width: 16,
                         ),
                         Image.asset(
-                          "assets/menu.png",
+                          "lib/assets/images/menu.png",
                           height: 22,
                         )
                       ],
@@ -89,19 +96,22 @@ class _EtkinlikHomeScreenState extends State<EtkinlikHomeScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
-                              "Hello, Sanskar!",
+                              "Merhaba Kullanıcı",
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w700,
-                                  fontSize: 21),
+                                  fontSize: 21,
+                                  fontFamily: 'Poppins'),
                             ),
                             SizedBox(
                               height: 6,
                             ),
                             Text(
-                              "Let's explore what’s happening nearby",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 15),
+                              "Çevrende neler oluyor keşfet",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontFamily: 'Poppins'),
                             )
                           ],
                         ),
@@ -113,12 +123,9 @@ class _EtkinlikHomeScreenState extends State<EtkinlikHomeScreen> {
                             borderRadius: BorderRadius.circular(30),
                           ),
                           child: ClipRRect(
-                              borderRadius: BorderRadius.circular(30),
-                              child: Image.asset(
-                                "assets/profilepic.jpg",
-                                height: 40,
-                              )),
-                        )
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                        ),
                       ],
                     ),
                     SizedBox(
@@ -127,7 +134,7 @@ class _EtkinlikHomeScreenState extends State<EtkinlikHomeScreen> {
 
                     /// Dates
                     Container(
-                      height: 60,
+                      height: 80,
                       child: ListView.builder(
                           itemCount: dates.length,
                           shrinkWrap: true,
@@ -146,8 +153,11 @@ class _EtkinlikHomeScreenState extends State<EtkinlikHomeScreen> {
                       height: 16,
                     ),
                     Text(
-                      "All Events",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      "Tüm Etkinlikler",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontFamily: 'Poppins'),
                     ),
                     SizedBox(
                       height: 16,
@@ -171,19 +181,24 @@ class _EtkinlikHomeScreenState extends State<EtkinlikHomeScreen> {
                       height: 16,
                     ),
                     Text(
-                      "Popular Events",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      "Popüler Etkinlikler",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontFamily: 'Poppins'),
                     ),
                     Container(
+                      height: 250,
                       child: ListView.builder(
                           itemCount: events.length,
                           shrinkWrap: true,
                           itemBuilder: (context, index) {
-                            return PopularEventTile(
-                              desc: events[index].desc,
-                              imgeAssetPath: events[index].imgeAssetPath,
-                              date: events[index].date,
-                              address: events[index].address,
+                            return Expanded(
+                              child: PopularEventTile(
+                                desc: events[index].desc,
+                                date: events[index].date,
+                                address: events[index].address,
+                              ),
                             );
                           }),
                     )
@@ -229,7 +244,8 @@ class DateTile extends StatelessWidget {
             weekDay,
             style: TextStyle(
                 color: isSelected ? Colors.black : Colors.white,
-                fontWeight: FontWeight.w600),
+                fontWeight: FontWeight.w600,
+                fontFamily: 'Poppins'),
           )
         ],
       ),
@@ -274,14 +290,9 @@ class PopularEventTile extends StatelessWidget {
   String desc;
   String date;
   String address;
-  String imgeAssetPath;
 
-  /// later can be changed with imgUrl
   PopularEventTile(
-      {required this.address,
-      required this.date,
-      required this.imgeAssetPath,
-      this.desc});
+      {required this.address, required this.date, required this.desc});
 
   @override
   Widget build(BuildContext context) {
@@ -302,41 +313,42 @@ class PopularEventTile extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     desc,
-                    style: TextStyle(color: Colors.white, fontSize: 18),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 19,
+                        fontFamily: 'Poppins'),
                   ),
                   SizedBox(
-                    height: 8,
+                    height: 2,
                   ),
                   Row(
                     children: <Widget>[
-                      Image.asset(
-                        "assets/calender.png",
-                        height: 12,
-                      ),
                       SizedBox(
-                        width: 8,
+                        width: 2,
                       ),
                       Text(
                         date,
-                        style: TextStyle(color: Colors.white, fontSize: 10),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontFamily: 'Poppins'),
                       )
                     ],
                   ),
                   SizedBox(
-                    height: 4,
+                    height: 2,
                   ),
                   Row(
                     children: <Widget>[
-                      Image.asset(
-                        "assets/location.png",
-                        height: 12,
-                      ),
                       SizedBox(
-                        width: 8,
+                        width: 3,
                       ),
                       Text(
                         address,
-                        style: TextStyle(color: Colors.white, fontSize: 10),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 10,
+                            fontFamily: 'Poppins'),
                       )
                     ],
                   ),
@@ -345,15 +357,9 @@ class PopularEventTile extends StatelessWidget {
             ),
           ),
           ClipRRect(
-              borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(8),
-                  bottomRight: Radius.circular(8)),
-              child: Image.asset(
-                imgeAssetPath,
-                height: 100,
-                width: 120,
-                fit: BoxFit.cover,
-              )),
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(8), bottomRight: Radius.circular(8)),
+          )
         ],
       ),
     );

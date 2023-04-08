@@ -95,7 +95,7 @@ class CategoryCard extends StatelessWidget {
         Navigator.pushNamed(context, "/forumScreen");
         break;
       case 2:
-        Navigator.pushNamed(context, "/forumScreen");
+        Navigator.pushNamed(context, "/etkinlikScreen");
         break;
       case 3:
         Navigator.pushNamed(context, "/courseScreen");
@@ -113,12 +113,6 @@ class CategoryCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         handleItemTap(context, index);
-        /*Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const CourseScreen(),
-          ),
-        );*/
       },
       child: Container(
         padding: const EdgeInsets.all(10),
@@ -146,10 +140,13 @@ class CategoryCard extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            Text(category.name),
+            Text(
+              category.name,
+              style: TextStyle(fontSize: 22, fontFamily: 'Poppins'),
+            ),
             Text(
               "${category.noOfCourses.toString()} courses",
-              style: Theme.of(context).textTheme.bodySmall,
+              style: TextStyle(fontSize: 12, fontFamily: 'Poppins'),
             ),
           ],
         ),
