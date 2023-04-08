@@ -5,6 +5,7 @@ import '../widgets/numbers_widget.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
+  //final _controller = PageController(initialPage: 2);
 
   final double coverHeight = 280;
   final double profileHeight = 144;
@@ -45,7 +46,6 @@ class ProfileScreen extends StatelessWidget {
               style: TextStyle(fontFamily: 'Poppins', fontSize: 15)),
           const SizedBox(height: 16),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            IconButton(onPressed: null, icon: Icon(FontAwesomeIcons.slack)),
             buildSocialIcon(FontAwesomeIcons.slack),
             const SizedBox(width: 12),
             buildSocialIcon(FontAwesomeIcons.github),

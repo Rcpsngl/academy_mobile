@@ -20,17 +20,17 @@ List<Category> categoryList = [
   ),
   Category(
     name: 'OUA Forum',
-    noOfCourses: 20,
+    //noOfCourses: 20,
     thumbnail: 'lib/assets/icons/accounting.jpg',
   ),
   Category(
     name: 'Etkinlikler',
-    noOfCourses: 16,
+    //noOfCourses: 16,
     thumbnail: 'lib/assets/icons/photography.jpg',
   ),
   Category(
     name: 'Takvim',
-    noOfCourses: 25,
+    //noOfCourses: 25,
     thumbnail: 'lib/assets/icons/design.jpg',
   ),
 ];
