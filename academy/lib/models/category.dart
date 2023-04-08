@@ -3,11 +3,9 @@ import 'package:flutter/cupertino.dart';
 class Category {
   String thumbnail;
   String name;
-  int? noOfCourses;
 
   Category({
     required this.name,
-    this.noOfCourses,
     required this.thumbnail,
   });
 }
@@ -15,22 +13,18 @@ class Category {
 List<Category> categoryList = [
   Category(
     name: 'Eğitimler',
-    noOfCourses: 9,
-    thumbnail: 'lib/assets/icons/laptop.jpg',
+    thumbnail: 'lib/assets/images/education.png',
   ),
   Category(
     name: 'OUA Forum',
-    //noOfCourses: 20,
-    thumbnail: 'lib/assets/icons/accounting.jpg',
+    thumbnail: 'lib/assets/images/menu.png',
   ),
   Category(
     name: 'Etkinlikler',
-    //noOfCourses: 16,
-    thumbnail: 'lib/assets/icons/photography.jpg',
+    thumbnail: 'lib/assets/images/sports.png',
   ),
   Category(
     name: 'Takvim',
-    //noOfCourses: 25,
-    thumbnail: 'lib/assets/icons/design.jpg',
+    thumbnail: 'lib/assets/images/notify.png',
   ),
 ];

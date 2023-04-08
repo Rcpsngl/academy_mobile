@@ -20,6 +20,7 @@ class _FeaturedScreenState extends State<FeaturedScreen> {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
       child: Scaffold(
+        backgroundColor: Color(0xff102733),
         body: Column(
           children: const [
             AppBar(),
@@ -45,7 +46,8 @@ class Body extends StatelessWidget {
             children: [
               Text(
                 "Kategoriler",
-                style: Theme.of(context).textTheme.bodyLarge,
+                style: TextStyle(
+                    color: Colors.white, fontFamily: 'Poppins', fontSize: 22),
               ),
               TextButton(
                 onPressed: () {},
@@ -117,7 +119,7 @@ class CategoryCard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Color(0xff29404E),
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
@@ -131,7 +133,6 @@ class CategoryCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Align(
-              alignment: Alignment.topRight,
               child: Image.asset(
                 category.thumbnail,
                 height: kCategoryCardImageSize,
@@ -140,13 +141,12 @@ class CategoryCard extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            Text(
-              category.name,
-              style: TextStyle(fontSize: 22, fontFamily: 'Poppins'),
-            ),
-            Text(
-              "${category.noOfCourses.toString()} courses",
-              style: TextStyle(fontSize: 12, fontFamily: 'Poppins'),
+            Center(
+              child: Text(
+                category.name,
+                style: TextStyle(
+                    fontSize: 22, fontFamily: 'Poppins', color: Colors.white),
+              ),
             ),
           ],
         ),
@@ -175,10 +175,7 @@ class AppBar extends StatelessWidget {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           stops: [0.1, 0.5],
-          colors: [
-            Color(0xff886ff2),
-            Color(0xff6849ef),
-          ],
+          colors: [Colors.green, Colors.deepOrange],
         ),
       ),
       child: Column(

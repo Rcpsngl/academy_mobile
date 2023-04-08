@@ -18,6 +18,7 @@ class _CourseScreenState extends State<CourseScreen> {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.dark,
       child: Scaffold(
+        backgroundColor: Color(0xff102733),
         body: SafeArea(
           bottom: false,
           child: Padding(
@@ -33,6 +34,7 @@ class _CourseScreenState extends State<CourseScreen> {
                           child: Text(
                             'Derslerim',
                             style: TextStyle(
+                              color: Colors.white,
                               fontSize: 30,
                               fontFamily: "Poppins",
                             ),
@@ -99,7 +101,7 @@ class CourseContainer extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: Colors.white,
+          color: Color(0xff29404E),
         ),
         padding: const EdgeInsets.all(10),
         child: Row(
@@ -119,10 +121,21 @@ class CourseContainer extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(course.name),
+                  Text(
+                    course.name,
+                    style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 18,
+                        color: Colors.white,
+                        fontWeight: FontWeight.normal),
+                  ),
                   Text(
                     "Öğretmen ${course.ogretmen}",
-                    style: Theme.of(context).textTheme.bodySmall,
+                    style: TextStyle(
+                        fontFamily: 'Poppins-Medium',
+                        fontSize: 14,
+                        color: Colors.white,
+                        fontWeight: FontWeight.normal),
                   ),
                   const SizedBox(
                     height: 5,

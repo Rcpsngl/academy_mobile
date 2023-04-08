@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Color(0xff102733),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Center(
@@ -75,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
                 Text(
                   "Akademi Mobil'e Hoşgeldiniz",
                   style: TextStyle(
-                    color: Colors.grey[700],
+                    color: Colors.white,
                     fontSize: 16,
                   ),
                 ),

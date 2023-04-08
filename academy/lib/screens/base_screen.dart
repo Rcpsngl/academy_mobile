@@ -26,6 +26,7 @@ class _BaseScreenState extends State<BaseScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff102733),
       body: _pages[_selectedIndex],
       bottomNavigationBar: CustomNavigationBar(),
     );

@@ -59,7 +59,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Color(0xff102733),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Center(
@@ -80,7 +80,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 Text(
                   "Lütfen Bilgileri Eksiksiz Doldurun",
                   style: TextStyle(
-                    color: Colors.grey[700],
+                    color: Colors.white,
                     fontSize: 16,
                   ),
                 ),
@@ -146,7 +146,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   children: [
                     Text(
                       'Zaten Hesabınız Varsa',
-                      style: TextStyle(color: Colors.grey[700], fontSize: 16),
+                      style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
                     const SizedBox(width: 20),
                     GestureDetector(

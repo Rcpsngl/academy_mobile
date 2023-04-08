@@ -31,25 +31,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      routes: {
-        "/authPage": (context) => AuthPage(),
-        "/forumScreen": (context) => ForumScreen(),
-        "/loginOrRegisterPage": (context) => LoginOrRegisterPage(),
-        "/loginPage": (context) => LoginPage(
-              onTap: () {},
-            ),
-        "/registerPage": (context) => RegisterPage(onTap: () {}),
-        "/baseScreen": (context) => BaseScreen(),
-        "/courseScreen": (context) => CourseScreen(),
-        "/detailsScreen": (context) => DetailsScreen(title: 'asd'),
-        "/featuredScreen": (context) => FeaturedScreen(),
-        "/settingsScreen": (context) => SettingsScreen(),
-        "/profileScreen": (context) => ProfileScreen(),
-        "/etkinlikScreen": (context) => EtkinlikScreen(),
-      },
-      debugShowCheckedModeBanner: false,
-      home: BaseScreen(),
-    );
+    return MaterialApp(routes: {
+      "/authPage": (context) => AuthPage(),
+      "/forumScreen": (context) => ForumScreen(),
+      "/loginOrRegisterPage": (context) => LoginOrRegisterPage(),
+      "/loginPage": (context) => LoginPage(
+            onTap: () {},
+          ),
+      "/registerPage": (context) => RegisterPage(onTap: () {}),
+      "/baseScreen": (context) => BaseScreen(),
+      "/courseScreen": (context) => CourseScreen(),
+      "/detailsScreen": (context) => DetailsScreen(title: 'asd'),
+      "/featuredScreen": (context) => FeaturedScreen(),
+      "/settingsScreen": (context) => SettingsScreen(),
+      "/profileScreen": (context) => ProfileScreen(),
+      "/etkinlikScreen": (context) => EtkinlikScreen(),
+    }, debugShowCheckedModeBanner: false, home: BaseScreen());
   }
 }

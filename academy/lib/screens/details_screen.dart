@@ -37,7 +37,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.dark,
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xff102733),
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
@@ -51,9 +51,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         child: Text(
                           "Flutter Hazırlık",
                           style: TextStyle(
-                            fontSize: 30,
-                            fontFamily: "Poppins",
-                          ),
+                              fontSize: 30,
+                              fontFamily: "Poppins",
+                              color: Colors.white),
                         ),
                       ),
                       Positioned(
@@ -78,9 +78,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 const Text(
                   "Flutter'a Giriş",
                   style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 18,
-                  ),
+                      fontWeight: FontWeight.w700,
+                      fontSize: 18,
+                      color: Colors.white),
                 ),
                 const SizedBox(
                   height: 3,
@@ -88,9 +88,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 const Text(
                   "Sercan Yusuf",
                   style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16,
-                  ),
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16,
+                      color: Colors.white),
                 ),
                 const SizedBox(
                   height: 3,
@@ -104,10 +104,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     const Text(
                       " 4.8",
                       style: TextStyle(
-                        color: Colors.grey,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 16,
-                      ),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: Colors.white),
                     ),
                     const SizedBox(
                       width: 50,
@@ -119,7 +118,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     const Text(
                       " 147 Dakika",
                       style: TextStyle(
-                        color: Colors.grey,
+                        color: Colors.white,
                         fontWeight: FontWeight.w500,
                         fontSize: 16,
                       ),
@@ -141,7 +140,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
         ),
         bottomSheet: BottomSheet(
           onClosing: () {},
-          backgroundColor: Colors.white,
+          backgroundColor: Color(0xff102733),
           enableDrag: false,
           builder: (context) {
             return const SizedBox(
@@ -247,7 +246,7 @@ class _CustomTabViewState extends State<CustomTabView> {
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        color: Colors.grey.shade200,
+        color: Color(0xff29404E),
       ),
       child: Row(
         children: _tags
@@ -322,7 +321,7 @@ class CustomIconButton extends StatelessWidget {
     required this.child,
     required this.height,
     required this.width,
-    this.color = Colors.white,
+    this.color = Colors.grey,
     required this.onTap,
   }) : super(key: key);
 
