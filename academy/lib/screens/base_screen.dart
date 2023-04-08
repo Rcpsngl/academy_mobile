@@ -33,63 +33,67 @@ class _BaseScreenState extends State<BaseScreen> {
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: kPrimaryColor,
-          backgroundColor: Colors.white,
-          elevation: 0,
-          items: [
-            BottomNavigationBarItem(
-              activeIcon: Image.asset(
-                icFeatured,
-                height: kBottomNavigationBarItemSize,
+      bottomNavigationBar: SizedBox(
+        height: 100,
+        child: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            selectedItemColor: kPrimaryColor,
+            backgroundColor: Colors.white,
+            elevation: 0,
+            items: [
+              BottomNavigationBarItem(
+                activeIcon: Image.asset(
+                  icHome,
+                  height: kBottomNavigationBarItemSize,
+                ),
+                icon: Image.asset(
+                  icactHome,
+                  height: kBottomNavigationBarItemSize,
+                ),
+                label: "Anasayfa",
               ),
-              icon: Image.asset(
-                icFeaturedOutlined,
-                height: kBottomNavigationBarItemSize,
+              BottomNavigationBarItem(
+                activeIcon: Image.asset(
+                  icPerson,
+                  height: kBottomNavigationBarItemSize,
+                ),
+                icon: Image.asset(
+                  icdeactivePerson,
+                  height: kBottomNavigationBarItemSize,
+                ),
+                label: "Profil",
               ),
-              label: "Forum",
-            ),
-            BottomNavigationBarItem(
-              activeIcon: Image.asset(
-                icLearning,
-                height: kBottomNavigationBarItemSize,
+              BottomNavigationBarItem(
+                activeIcon: Image.asset(
+                  icSetting,
+                  height: kBottomNavigationBarItemSize,
+                ),
+                icon: Image.asset(
+                  icSettingOutlined,
+                  height: kBottomNavigationBarItemSize,
+                ),
+                label: "Ayarlar",
               ),
-              icon: Image.asset(
-                icLearningOutlined,
-                height: kBottomNavigationBarItemSize,
-              ),
-              label: "Derslerim",
-            ),
-            BottomNavigationBarItem(
-              activeIcon: Image.asset(
-                icWishlist,
-                height: kBottomNavigationBarItemSize,
-              ),
-              icon: Image.asset(
-                icWishlistOutlined,
-                height: kBottomNavigationBarItemSize,
-              ),
-              label: "Favoriler",
-            ),
-            BottomNavigationBarItem(
-              activeIcon: Image.asset(
-                icSetting,
-                height: kBottomNavigationBarItemSize,
-              ),
-              icon: Image.asset(
-                icSettingOutlined,
-                height: kBottomNavigationBarItemSize,
-              ),
-              label: "Ayarlar",
-            ),
-          ],
-          currentIndex: _selectedIndex,
-          onTap: (int index) {
-            setState(() {
-              _selectedIndex = index;
-            });
-          }),
+            ],
+            currentIndex: _selectedIndex,
+            onTap: (int index) {
+              setState(() {
+                _selectedIndex = index;
+              });
+              switch (index) {
+                case 0:
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/baseScreen', (Route<dynamic> route) => false);
+                  break;
+                case 1:
+                  Navigator.pushNamed(context, '/profileScreen');
+                  break;
+                case 2:
+                  Navigator.pushNamed(context, '/settingsScreen');
+                  break;
+              }
+            }),
+      ),
     );
   }
 }

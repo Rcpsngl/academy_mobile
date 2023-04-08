@@ -74,6 +74,7 @@ class Body extends StatelessWidget {
           ),
           itemBuilder: (context, index) {
             return CategoryCard(
+              index: index,
               category: categoryList[index],
             );
           },
@@ -85,21 +86,40 @@ class Body extends StatelessWidget {
 }
 
 class CategoryCard extends StatelessWidget {
+  void handleItemTap(BuildContext context, int index) {
+    switch (index) {
+      case 0:
+        Navigator.pushNamed(context, "/courseScreen");
+        break;
+      case 1:
+        Navigator.pushNamed(context, "/forumScreen");
+        break;
+      case 2:
+        Navigator.pushNamed(context, "/forumScreen");
+        break;
+      case 3:
+        Navigator.pushNamed(context, "/courseScreen");
+        break;
+    }
+  }
+
+  final int index;
   final Category category;
-  const CategoryCard({
-    Key? key,
-    required this.category,
-  }) : super(key: key);
+  CategoryCard({Key? key, required this.category, required this.index})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const CourseScreen(),
-        ),
-      ),
+      onTap: () {
+        handleItemTap(context, index);
+        /*Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const CourseScreen(),
+          ),
+        );*/
+      },
       child: Container(
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
@@ -172,12 +192,13 @@ class AppBar extends StatelessWidget {
             children: [
               Text(
                 "Oyun ve Uygulama Akademisi",
-                style: Theme.of(context).textTheme.titleLarge,
+                style: TextStyle(
+                    fontSize: 18, fontFamily: "Poppins", color: Colors.white),
               ),
-              CircleButton(
-                icon: Icons.notifications,
-                onPressed: () {},
-              ),
+              SizedBox(
+                  width: 50,
+                  height: 50,
+                  child: Image.asset("lib/assets/images/academy.png")),
             ],
           ),
           const SizedBox(

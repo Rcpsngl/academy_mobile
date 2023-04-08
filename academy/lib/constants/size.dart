@@ -1,2 +1,2 @@
-const kBottomNavigationBarItemSize = 24.0;
+const kBottomNavigationBarItemSize = 30.0;
 const kCategoryCardImageSize = 120.0;

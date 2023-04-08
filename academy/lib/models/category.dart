@@ -1,33 +1,35 @@
+import 'package:flutter/cupertino.dart';
+
 class Category {
   String thumbnail;
   String name;
-  int noOfCourses;
+  int? noOfCourses;
 
   Category({
     required this.name,
-    required this.noOfCourses,
+    this.noOfCourses,
     required this.thumbnail,
   });
 }
 
 List<Category> categoryList = [
   Category(
-    name: 'Teknik Eğitimler',
-    noOfCourses: 55,
+    name: 'Eğitimler',
+    noOfCourses: 9,
     thumbnail: 'lib/assets/icons/laptop.jpg',
   ),
   Category(
-    name: 'Girişimcilik',
+    name: 'OUA Forum',
     noOfCourses: 20,
     thumbnail: 'lib/assets/icons/accounting.jpg',
   ),
   Category(
-    name: 'Finans',
+    name: 'Etkinlikler',
     noOfCourses: 16,
     thumbnail: 'lib/assets/icons/photography.jpg',
   ),
   Category(
-    name: 'Hukuk',
+    name: 'Takvim',
     noOfCourses: 25,
     thumbnail: 'lib/assets/icons/design.jpg',
   ),
