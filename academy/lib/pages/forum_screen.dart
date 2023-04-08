@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ForumScreen extends StatefulWidget {
   const ForumScreen({Key? key}) : super(key: key);
-
+  final bodyPadding = 70;
   @override
   _ForumScreenState createState() => _ForumScreenState();
 }
@@ -12,7 +13,6 @@ class _ForumScreenState extends State<ForumScreen> {
 // text fields' controllers
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _text = TextEditingController();
-
   final CollectionReference _products =
       FirebaseFirestore.instance.collection('products');
 
@@ -50,7 +50,12 @@ class _ForumScreenState extends State<ForumScreen> {
                     final String name = _nameController.text;
                     final String text = _text.text;
                     if (text.isNotEmpty) {
-                      await _products.add({"name": name, "text": text});
+                      await _products.add({
+                        "name": name,
+                        "text": text,
+                        'like': '0',
+                        'comment': ''
+                      });
 
                       _nameController.text = '';
                       _text.text = '';
@@ -129,7 +134,9 @@ class _ForumScreenState extends State<ForumScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Center(child: Text('Forum')),
+          title: const Text('Forum'),
+          backgroundColor: Colors.green,
+          centerTitle: true,
         ),
         body: StreamBuilder(
           stream: _products.snapshots(),
@@ -141,23 +148,55 @@ class _ForumScreenState extends State<ForumScreen> {
                   final DocumentSnapshot documentSnapshot =
                       streamSnapshot.data!.docs[index];
                   return Card(
-                    margin: const EdgeInsets.all(10),
-                    child: ListTile(
-                      title: Text(documentSnapshot['name']),
-                      subtitle: Text(documentSnapshot['text']),
-                      trailing: SizedBox(
-                        width: 100,
-                        child: Row(
+                    clipBehavior: Clip.antiAlias,
+                    color: Color.fromARGB(255, 240, 239, 239),
+                    elevation: 5,
+                    shape: RoundedRectangleBorder(
+                      side: const BorderSide(
+                        color: Colors.black45,
+                      ),
+                      borderRadius: BorderRadius.circular(20.0), //<-- SEE HERE
+                    ),
+                    child: Column(
+                      children: [
+                        ListTile(
+                          //leading: Icon(Icons.arrow_drop_down_circle),
+                          title: Text(documentSnapshot['name']),
+                          subtitle: Text(
+                            'Secondary Text',
+                            style:
+                                TextStyle(color: Colors.black.withOpacity(0.6)),
+                          ),
+                        ),
+                        Divider(thickness: 2),
+                        ListTile(
+                          //leading: Icon(Icons.arrow_drop_down_circle),
+                          title: Text(documentSnapshot['text']),
+                        ),
+                        ButtonBar(
+                          alignment: MainAxisAlignment.start,
                           children: [
+                            Text(documentSnapshot['like']),
                             IconButton(
-                                icon: const Icon(Icons.edit),
-                                onPressed: () => _update(documentSnapshot)),
+                                // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
+                                icon: const FaIcon(
+                                  FontAwesomeIcons.solidHeart,
+                                  color: Colors.red,
+                                ),
+                                onPressed: () {
+                                  print("Pressed");
+                                }),
+                            Text(documentSnapshot['comment']),
                             IconButton(
-                                icon: const Icon(Icons.delete),
-                                onPressed: () => _delete(documentSnapshot.id)),
+                                padding: EdgeInsets.zero,
+                                // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
+                                icon: const FaIcon(FontAwesomeIcons.comment),
+                                onPressed: () {
+                                  print("Pressed");
+                                }),
                           ],
                         ),
-                      ),
+                      ],
                     ),
                   );
                 },
@@ -171,6 +210,7 @@ class _ForumScreenState extends State<ForumScreen> {
         ),
 // Add new product
         floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.green,
           onPressed: () => _create(),
           child: const Icon(Icons.add),
         ),
