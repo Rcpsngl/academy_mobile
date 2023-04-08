@@ -15,7 +15,7 @@ class Course {
 List<Course> courses = [
   Course(
     ogretmen: ":Sercan Yusuf",
-    completedPercentage: 1,
+    completedPercentage: 0.1,
     name: "Flutter Hazırlık",
     thumbnail: "lib/assets/icons/flutter.jpg",
   ),

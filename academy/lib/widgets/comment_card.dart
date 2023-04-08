@@ -11,12 +11,12 @@ class CommendCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text('28'),
+        Text(comment.upvote),
         Icon(Icons.arrow_upward),
         const SizedBox(
           width: 15,
         ),
-        Text('5'),
+        Text(comment.downvote),
         Icon(Icons.arrow_downward),
         SizedBox(width: 10),
         Expanded(

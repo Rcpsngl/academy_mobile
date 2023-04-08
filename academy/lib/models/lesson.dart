@@ -21,7 +21,7 @@ List<Lesson> lessonList = [
   ),
   Lesson(
     duration: '10 dakika',
-    isCompleted: false,
+    isCompleted: true,
     isPlaying: false,
     name: "Dart 101",
   ),

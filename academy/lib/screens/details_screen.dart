@@ -270,41 +270,44 @@ class EnrollBottomSheet extends StatefulWidget {
 class _EnrollBottomSheetState extends State<EnrollBottomSheet> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 30.0,
-      ),
-      child: Row(
-        children: [
-          CustomIconButton(
-            onTap: () {},
-            height: 45,
-            width: 45,
-            child: const Icon(
-              Icons.favorite,
-              color: Colors.pink,
-              size: 30,
-            ),
-          ),
-          const SizedBox(
-            width: 20,
-          ),
-          Expanded(
-            child: CustomIconButton(
+    return SizedBox(
+      height: 20,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 30.0,
+        ),
+        child: Row(
+          children: [
+            CustomIconButton(
               onTap: () {},
-              color: kPrimaryColor,
-              height: 45,
+              height: 30,
               width: 45,
-              child: const Text(
-                "Soru Sor",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                ),
+              child: const Icon(
+                Icons.favorite,
+                color: Colors.pink,
+                size: 30,
               ),
             ),
-          )
-        ],
+            const SizedBox(
+              width: 20,
+            ),
+            Expanded(
+              child: CustomIconButton(
+                onTap: () {},
+                color: kPrimaryColor,
+                height: 30,
+                width: 45,
+                child: const Text(
+                  "Soru Sor",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
