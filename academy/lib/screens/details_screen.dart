@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:video_player/video_player.dart';
@@ -5,8 +7,10 @@ import 'package:video_player/video_player.dart';
 import '../constants/color.dart';
 import '../constants/icons.dart';
 import '../models/lesson.dart';
+import '../models/comments.dart';
 import '../widgets/custom_video_player.dart';
 import '../widgets/lesson_card.dart';
+import '../widgets/comment_card.dart';
 
 class DetailsScreen extends StatefulWidget {
   final String title;
@@ -21,7 +25,7 @@ class DetailsScreen extends StatefulWidget {
 
 class _DetailsScreenState extends State<DetailsScreen> {
   int _selectedTag = 0;
-
+  String text = '';
   void changeTab(int index) {
     setState(() {
       _selectedTag = index;
@@ -174,15 +178,29 @@ class PlayList extends StatelessWidget {
   }
 }
 
-class Description extends StatelessWidget {
+class Description extends StatefulWidget {
   const Description({Key? key}) : super(key: key);
 
   @override
+  State<Description> createState() => _DescriptionState();
+}
+
+class _DescriptionState extends State<Description> {
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(top: 20.0),
-      child: Text(
-          "Build Flutter iOS and Android Apps with a Single Codebase: Learn Google's Flutter Mobile Development Framework & Dart"),
+    return Expanded(
+      child: ListView.separated(
+        separatorBuilder: (_, __) {
+          return const SizedBox(
+            height: 20,
+          );
+        },
+        padding: const EdgeInsets.only(top: 20, bottom: 40),
+        shrinkWrap: true,
+        itemCount: commentList.length,
+        itemBuilder: (_, index) {
+          return CommendCard(comment: commentList[index]);
+        },
+      ),
     );
   }
 }
@@ -278,7 +296,7 @@ class _EnrollBottomSheetState extends State<EnrollBottomSheet> {
               height: 45,
               width: 45,
               child: const Text(
-                "Kayıt Ol",
+                "Soru Sor",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
