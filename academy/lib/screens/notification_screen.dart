@@ -52,11 +52,7 @@ Genel Özet: Görevler Tamamlandı
                 child: Text('07/04/2023 02:45',
                     style: TextStyle(color: kLightColor)),
               ),
-<<<<<<< HEAD
-              SizedBox(height: 60),
-=======
               SizedBox(height: 10),
->>>>>>> 0d4e93f503d4c3b3e9521ad24118490f72b4f346
               Text('Akademi Önemli Duyuru', style: kMediumText),
               SizedBox(height: 8.0),
               SizedBox(height: 8.0),
