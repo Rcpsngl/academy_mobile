@@ -95,7 +95,7 @@ class _EtkinlikScreenState extends State<EtkinlikScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: const <Widget>[
                             Text(
-                              "Merhaba Kullanıcı",
+                              "Merhaba Aslı Deniz",
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w700,
