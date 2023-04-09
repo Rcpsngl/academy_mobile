@@ -100,7 +100,7 @@ class CategoryCard extends StatelessWidget {
         Navigator.pushNamed(context, "/etkinlikScreen");
         break;
       case 3:
-        Navigator.pushNamed(context, "/courseScreen");
+        Navigator.pushNamed(context, "/calendarScreen");
         break;
     }
   }

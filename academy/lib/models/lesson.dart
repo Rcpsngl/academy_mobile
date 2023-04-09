@@ -48,5 +48,35 @@ List<Lesson> lessonList = [
     isCompleted: false,
     isPlaying: false,
     name: "Fonksiyonlar",
+  ),
+  Lesson(
+    duration: '5 min',
+    isCompleted: false,
+    isPlaying: false,
+    name: "",
+  ),
+  Lesson(
+    duration: '5 min',
+    isCompleted: false,
+    isPlaying: false,
+    name: "Listeler",
+  ),
+  Lesson(
+    duration: '5 min',
+    isCompleted: false,
+    isPlaying: false,
+    name: "Nesne Tabanlı Programlama",
+  ),
+  Lesson(
+    duration: '5 min',
+    isCompleted: false,
+    isPlaying: false,
+    name: "İstisnalar",
+  ),
+  Lesson(
+    duration: '5 min',
+    isCompleted: false,
+    isPlaying: false,
+    name: "Kalıtım",
   )
 ];

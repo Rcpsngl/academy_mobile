@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -42,13 +43,9 @@ class _CourseScreenState extends State<CourseScreen> {
                         ),
                       ),
                       Positioned(
-                        left: 0,
-                        child: CustomIconButton(
-                          child: const Icon(Icons.arrow_back),
-                          height: 35,
-                          width: 35,
-                          onTap: () => Navigator.pop(context),
-                        ),
+                        left: 5,
+                        top: 10,
+                        child: kgeriTus,
                       ),
                     ],
                   ),
