@@ -134,6 +134,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
           ],
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: kKoyuArkaplan,
         onPressed: () => showDialog(
