@@ -19,21 +19,18 @@ final List<Setting> settings = [
     route: "/",
     icon: CupertinoIcons.person_fill,
   ),
+  
   Setting(
-    title: "Ayarlar",
+    title: "Topluluk",
     route: "/",
-    icon: Icons.settings,
+    icon: CupertinoIcons.person_3_fill,
   ),
   Setting(
     title: "Sertifikalarım",
     route: "/",
     icon: CupertinoIcons.doc_fill,
   ),
-  Setting(
-    title: "Çıkış Yap",
-    route: "/",
-    icon: Icons.logout,
-  ),
+  
 ];
 
 final List<Setting> settings2 = [
@@ -48,8 +45,13 @@ final List<Setting> settings2 = [
     icon: CupertinoIcons.pencil_circle_fill,
   ),
   Setting(
-    title: "Topluluk",
+    title: "Ayarlar",
     route: "/",
-    icon: CupertinoIcons.person_3_fill,
+    icon: Icons.settings,
+  ),
+  Setting(
+    title: "Çıkış Yap",
+    route: "/",
+    icon: Icons.logout,
   ),
 ];

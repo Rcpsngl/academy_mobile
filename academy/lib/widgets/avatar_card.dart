@@ -13,7 +13,7 @@ class AvatarCard extends StatelessWidget {
       children: [
         ClipOval(
           child: Image.asset(
-            icPerson,
+            "lib/assets/images/denizpp.jpg",
             width: 80,
             height: 80,
           ),
@@ -22,8 +22,13 @@ class AvatarCard extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+<<<<<<< HEAD
           children: const [
             Text("Recep Şengül", style: kLargeText),
+=======
+          children: [
+            const Text("Aslı Deniz Ürersoy", style: kLargeText),
+>>>>>>> af038fecdc724d05c1966f3c3f6128724702c572
           ],
         )
       ],
