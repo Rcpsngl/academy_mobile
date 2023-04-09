@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
 
-<<<<<<< HEAD:academy/lib/screens/notification_screen.dart
-import '../constants/constants.dart';
-=======
 import '../constants/color.dart';
-
-class NotificationPage extends StatefulWidget {
-  
->>>>>>> 0943be23958ecf1972d823e9e8e9823863e3b5bd:academy/lib/notification/notificationPage.dart
+import '../constants/constants.dart';
 
 class NotificationScreen extends StatefulWidget {
   @override
@@ -20,15 +14,13 @@ class _NotificationScreenState extends State<NotificationScreen> {
     return Scaffold(
       backgroundColor: kKoyuArkaplan,
       appBar: AppBar(
-<<<<<<< HEAD:academy/lib/screens/notification_screen.dart
-        title: Text('Akademi Duyuru'),
-      ),
-=======
-          title: const Text('Akademi Duyuru', style: kMediumText,),
-          backgroundColor: kKoyuArkaplan,
-          centerTitle: true,
+        title: const Text(
+          'Akademi Duyuru',
+          style: kMediumText,
         ),
->>>>>>> 0943be23958ecf1972d823e9e8e9823863e3b5bd:academy/lib/notification/notificationPage.dart
+        backgroundColor: kKoyuArkaplan,
+        centerTitle: true,
+      ),
       body: FittedBox(
         child: Container(
           // height: MediaQuery.of(context).size.height,
@@ -41,10 +33,8 @@ class _NotificationScreenState extends State<NotificationScreen> {
               borderRadius: BorderRadius.circular(8.0),
               boxShadow: [BoxShadow(color: kLightColor, blurRadius: 2.0)]),
           child: Column(
-            children: [ 
-              Text(
-                  'Akademi Çağrı Hattı',
-                  style: kMediumText ),
+            children: [
+              Text('Akademi Çağrı Hattı', style: kMediumText),
               SizedBox(height: 8.0),
               Image(image: AssetImage(manShoes)),
               SizedBox(height: 8.0),
@@ -63,14 +53,14 @@ Genel Özet: Görevler Tamamlandı
                 alignment: Alignment.centerRight,
                 child: Text('07/04/2023 02:45',
                     style: TextStyle(color: kLightColor)),
-              ),SizedBox(height: 60),Text(
-                  'Akademi Önemli Duyuru',
-                  style: kMediumText ),
+              ),
+              SizedBox(height: 60),
+              Text('Akademi Önemli Duyuru', style: kMediumText),
               SizedBox(height: 8.0),
               Image(image: AssetImage(manShoes)),
               SizedBox(height: 8.0),
               Text(
-                  '''Bir önceki iletide yer alan Teknik Eğitim Tamamlama Durumu verilerinde bir karışıklık yaşanmış olup, en güncell halini sizlerle tekrardan paylaşıyoruz.
+                '''Bir önceki iletide yer alan Teknik Eğitim Tamamlama Durumu verilerinde bir karışıklık yaşanmış olup, en güncell halini sizlerle tekrardan paylaşıyoruz.
 Merhaba Aslı Deniz Ürersoy, Akademi'de Mart ayının sonuna geldik, güncel durumun şöyle:
 Teknik Eğitim: Tamamlanmadı
 Coursera: Tamamlanmadı
@@ -82,7 +72,8 @@ Bu listeye göre henüz tamamlamadığın eğitimlerin varsa hala süren var. So
 AKADEMİ GAME & APP JAM'İ BAŞLIYOR!
 Tüm detaylar için duyurular kanalını takip et, sorularını Atıl Hoca'ya Cuma günü iletebileceksin
 *Lütfen sorular için Slack kanallarından bize ulaşın.''',
-                  style: TextStyle(color: Colors.white), ),
+                style: TextStyle(color: Colors.white),
+              ),
               SizedBox(height: 16.0),
               Align(
                 alignment: Alignment.centerRight,

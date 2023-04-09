@@ -70,67 +70,68 @@ class _ForumScreenState extends State<ForumScreen> {
           );
         });
   }
+  // Update fonk
+  // Future<void> _update([DocumentSnapshot? documentSnapshot]) async {
+  //   if (documentSnapshot != null) {
+  //     _nameController.text = documentSnapshot['name'];
+  //     _text.text = documentSnapshot['text'];
+  //   }
 
-  Future<void> _update([DocumentSnapshot? documentSnapshot]) async {
-    if (documentSnapshot != null) {
-      _nameController.text = documentSnapshot['name'];
-      _text.text = documentSnapshot['text'];
-    }
+  //   await showModalBottomSheet(
+  //       isScrollControlled: true,
+  //       context: context,
+  //       builder: (BuildContext ctx) {
+  //         return Padding(
+  //           padding: EdgeInsets.only(
+  //               top: 20,
+  //               left: 20,
+  //               right: 20,
+  //               bottom: MediaQuery.of(ctx).viewInsets.bottom + 20),
+  //           child: Column(
+  //             mainAxisSize: MainAxisSize.min,
+  //             crossAxisAlignment: CrossAxisAlignment.start,
+  //             children: [
+  //               TextField(
+  //                 controller: _nameController,
+  //                 decoration: const InputDecoration(labelText: 'Name'),
+  //               ),
+  //               TextField(
+  //                 controller: _text,
+  //                 decoration: const InputDecoration(
+  //                   labelText: 'Text',
+  //                 ),
+  //               ),
+  //               const SizedBox(
+  //                 height: 20,
+  //               ),
+  //               ElevatedButton(
+  //                 child: const Text('Update'),
+  //                 onPressed: () async {
+  //                   final String name = _nameController.text;
+  //                   final String text = _text.text;
+  //                   if (text.isNotEmpty) {
+  //                     await _products
+  //                         .doc(documentSnapshot!.id)
+  //                         .update({"name": name, "text": text});
+  //                     _nameController.text = '';
+  //                     _text.text = '';
+  //                     Navigator.of(context).pop();
+  //                   }
+  //                 },
+  //               )
+  //             ],
+  //           ),
+  //         );
+  //       });
+  // }
 
-    await showModalBottomSheet(
-        isScrollControlled: true,
-        context: context,
-        builder: (BuildContext ctx) {
-          return Padding(
-            padding: EdgeInsets.only(
-                top: 20,
-                left: 20,
-                right: 20,
-                bottom: MediaQuery.of(ctx).viewInsets.bottom + 20),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                TextField(
-                  controller: _nameController,
-                  decoration: const InputDecoration(labelText: 'Name'),
-                ),
-                TextField(
-                  controller: _text,
-                  decoration: const InputDecoration(
-                    labelText: 'Text',
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                ElevatedButton(
-                  child: const Text('Update'),
-                  onPressed: () async {
-                    final String name = _nameController.text;
-                    final String text = _text.text;
-                    if (text.isNotEmpty) {
-                      await _products
-                          .doc(documentSnapshot!.id)
-                          .update({"name": name, "text": text});
-                      _nameController.text = '';
-                      _text.text = '';
-                      Navigator.of(context).pop();
-                    }
-                  },
-                )
-              ],
-            ),
-          );
-        });
-  }
+  //Silme Fonk.
+  // Future<void> _delete(String productId) async {
+  //   await _products.doc(productId).delete();
 
-  Future<void> _delete(String productId) async {
-    await _products.doc(productId).delete();
-
-    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        content: Text('You have successfully deleted a product')));
-  }
+  //   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+  //       content: Text('You have successfully deleted a product')));
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -217,7 +218,7 @@ class _ForumScreenState extends State<ForumScreen> {
             );
           },
         ),
-// Add new product
+// Ekleme fonk.
         floatingActionButton: FloatingActionButton(
           backgroundColor: kNavBar2,
           onPressed: () => _create(),
