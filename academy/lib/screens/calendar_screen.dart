@@ -57,80 +57,82 @@ class _CalendarScreenState extends State<CalendarScreen> {
               Text("AKADEMİ TAKVİMİ", style: kMediumText),
             ],
           )),
-      body: Column(
-        children: [
-          TableCalendar(
-            locale: 'tr_TR',
-            focusedDay: selectedDay,
-            firstDay: DateTime(1990),
-            lastDay: DateTime(2050),
-            calendarFormat: format,
-            onFormatChanged: (CalendarFormat _format) {
-              setState(() {
-                format = _format;
-              });
-            },
-            startingDayOfWeek: StartingDayOfWeek.monday,
-            daysOfWeekVisible: true,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            TableCalendar(
+              locale: 'tr_TR',
+              focusedDay: selectedDay,
+              firstDay: DateTime(1990),
+              lastDay: DateTime(2050),
+              calendarFormat: format,
+              onFormatChanged: (CalendarFormat _format) {
+                setState(() {
+                  format = _format;
+                });
+              },
+              startingDayOfWeek: StartingDayOfWeek.monday,
+              daysOfWeekVisible: true,
 
-            //Day Changed
-            onDaySelected: (DateTime selectDay, DateTime focusDay) {
-              setState(() {
-                selectedDay = selectDay;
-                focusedDay = focusDay;
-              });
-              print(focusedDay);
-            },
-            selectedDayPredicate: (DateTime date) {
-              return isSameDay(selectedDay, date);
-            },
+              //Day Changed
+              onDaySelected: (DateTime selectDay, DateTime focusDay) {
+                setState(() {
+                  selectedDay = selectDay;
+                  focusedDay = focusDay;
+                });
+                print(focusedDay);
+              },
+              selectedDayPredicate: (DateTime date) {
+                return isSameDay(selectedDay, date);
+              },
 
-            eventLoader: _getEventsfromDay,
+              eventLoader: _getEventsfromDay,
 
-            //To style the Calendar
-            calendarStyle: CalendarStyle(
-              isTodayHighlighted: true,
-              selectedDecoration: BoxDecoration(
-                color: Colors.blue,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(5.0),
-              ),
-              selectedTextStyle: kSmallText,
-              todayDecoration: BoxDecoration(
-                color: Colors.blue,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(5.0),
-              ),
-              defaultDecoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(5.0),
-              ),
-              weekendDecoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(5.0),
-              ),
-            ),
-            headerStyle: HeaderStyle(
-                formatButtonVisible: true,
-                titleCentered: true,
-                formatButtonShowsNext: false,
-                formatButtonDecoration: BoxDecoration(
+              //To style the Calendar
+              calendarStyle: CalendarStyle(
+                isTodayHighlighted: true,
+                selectedDecoration: BoxDecoration(
                   color: Colors.blue,
+                  shape: BoxShape.rectangle,
                   borderRadius: BorderRadius.circular(5.0),
                 ),
-                formatButtonTextStyle: kSmallText),
-          ),
-          ..._getEventsfromDay(selectedDay).map(
-            (Event event) => ListTile(
-              title: Text(
-                event.title,
-                style: kSmallText,
+                selectedTextStyle: kSmallText,
+                todayDecoration: BoxDecoration(
+                  color: Colors.blue,
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(5.0),
+                ),
+                defaultDecoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(5.0),
+                ),
+                weekendDecoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(5.0),
+                ),
+              ),
+              headerStyle: HeaderStyle(
+                  formatButtonVisible: true,
+                  titleCentered: true,
+                  formatButtonShowsNext: false,
+                  formatButtonDecoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  formatButtonTextStyle: kSmallText),
+            ),
+            ..._getEventsfromDay(selectedDay).map(
+              (Event event) => ListTile(
+                title: Text(
+                  event.title,
+                  style: kSmallText,
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: kKoyuArkaplan,

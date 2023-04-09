@@ -13,16 +13,15 @@ class _NotificationScreenState extends State<NotificationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kKoyuArkaplan,
-      appBar: AppBar(
-        title: const Text(
-          'Akademi Duyuru',
-          style: kMediumText,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(80.0),
+        child: AppBar(
+          backgroundColor: kKoyuArkaplan,
+          centerTitle: true,
         ),
-        backgroundColor: kKoyuArkaplan,
-        centerTitle: true,
       ),
-      body: FittedBox(
-        child: Container(
+      body: Stack(children: [
+        Container(
           // height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           margin: EdgeInsets.all(kFixPadding),
@@ -36,7 +35,6 @@ class _NotificationScreenState extends State<NotificationScreen> {
             children: [
               Text('Akademi Çağrı Hattı', style: kMediumText),
               SizedBox(height: 8.0),
-              Image(image: AssetImage(manShoes)),
               SizedBox(height: 8.0),
               Text(
                   '''Merhaba Aslı Deniz, Akademi'de Mart görevleri için verilen ek sürenin de sonuna geldik, güncel durumun şöyle:
@@ -54,10 +52,13 @@ Genel Özet: Görevler Tamamlandı
                 child: Text('07/04/2023 02:45',
                     style: TextStyle(color: kLightColor)),
               ),
+<<<<<<< HEAD
               SizedBox(height: 60),
+=======
+              SizedBox(height: 10),
+>>>>>>> 0d4e93f503d4c3b3e9521ad24118490f72b4f346
               Text('Akademi Önemli Duyuru', style: kMediumText),
               SizedBox(height: 8.0),
-              Image(image: AssetImage(manShoes)),
               SizedBox(height: 8.0),
               Text(
                 '''Bir önceki iletide yer alan Teknik Eğitim Tamamlama Durumu verilerinde bir karışıklık yaşanmış olup, en güncell halini sizlerle tekrardan paylaşıyoruz.
@@ -83,7 +84,7 @@ Tüm detaylar için duyurular kanalını takip et, sorularını Atıl Hoca'ya Cu
             ],
           ),
         ),
-      ),
+      ]),
     );
   }
 }

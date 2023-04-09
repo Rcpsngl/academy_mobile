@@ -11,7 +11,6 @@ import 'package:academy/screens/featured_screen.dart';
 //import 'package:academy/screens/profile_screen.dart';
 import 'package:academy/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
-import 'notification/notificationList.dart';
 import 'screens/notification_screen.dart';
 import 'pages/login_page.dart';
 import 'firebase_options.dart';
@@ -49,7 +48,6 @@ class MyApp extends StatelessWidget {
       "/featuredScreen": (context) => FeaturedScreen(),
       "/settingsScreen": (context) => SettingsScreen(),
       "/bildirimScreen": (context) => NotificationScreen(),
-      "/bildirim-pace": (context) => NotificationList(),
       "/etkinlikScreen": (context) => EtkinlikScreen(),
       "/calendarScreen": (context) => CalendarScreen(),
     }, debugShowCheckedModeBanner: false, home: BaseScreen());

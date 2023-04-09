@@ -20,10 +20,9 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
   void initState() {
     super.initState();
     _controller = VideoPlayerController.network(
-      'https://vod-progressive.akamaized.net/exp=1681050261~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1609%2F9%2F233049424%2F826127910.mp4~hmac=f741770d0a31acab33409c0da81fcd87177206e4a41f96541e7b6618171b5a2b/vimeo-prod-skyfire-std-us/01/1609/9/233049424/826127910.mp4',
+      'https://vod-progressive.akamaized.net/exp=1681070562~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F355%2F18%2F451776712%2F1987653146.mp4~hmac=bd93f7f503a1d1082da2d942f8de8a94ae3a9745417288c44a13ecb5e06b10a4/vimeo-prod-skyfire-std-us/01/355/18/451776712/1987653146.mp4',
     )
       ..initialize().then((_) {
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
       })
       ..addListener(() {
