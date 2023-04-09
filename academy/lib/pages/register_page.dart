@@ -33,7 +33,7 @@ class _RegisterPageState extends State<RegisterPage> {
       } else {
         showErrorMessage('Şifreler aynı değil!');
       }
-      Navigator.pop(context);
+      Navigator.pushNamed(context, "/baseScreen");
     } on FirebaseAuthException catch (e) {
       Navigator.pop(context);
       //hata mesajı göster
@@ -151,13 +151,17 @@ class _RegisterPageState extends State<RegisterPage> {
                     const SizedBox(width: 20),
                     GestureDetector(
                       onTap: widget.onTap,
-                      child: const Text(
-                        'Giriş Yap',
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      child: TextButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, "/loginPage");
+                          },
+                          child: const Text(
+                            'Giriş Yap',
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )),
                     ),
                   ],
                 )

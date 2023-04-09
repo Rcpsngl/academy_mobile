@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:video_player/video_player.dart';
 
 import '../constants/color.dart';
@@ -282,8 +283,8 @@ class _EnrollBottomSheetState extends State<EnrollBottomSheet> {
               height: 30,
               width: 45,
               child: const Icon(
-                Icons.favorite,
-                color: Colors.pink,
+                FontAwesomeIcons.solidHeart,
+                color: Colors.white,
                 size: 30,
               ),
             ),

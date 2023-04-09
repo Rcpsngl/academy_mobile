@@ -21,14 +21,15 @@ class _LoginPageState extends State<LoginPage> {
     showDialog(
       context: context,
       builder: (context) {
-        return Center(child: CircularProgressIndicator());
+        return const Center(child: CircularProgressIndicator());
       },
     );
     //giris yapmak
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
-          email: emailController.text, password: passwordController.text);
-      Navigator.pop(context);
+          email: emailController.text.trim(),
+          password: passwordController.text.trim());
+      Navigator.pushNamed(context, "/baseScreen");
     } on FirebaseAuthException catch (e) {
       Navigator.pop(context);
       //hata mesajı göster
@@ -120,7 +121,7 @@ class _LoginPageState extends State<LoginPage> {
                           child: Text('Şifremi Unuttum',
                               style: TextStyle(color: Colors.grey[600])),
                           onPressed: () {
-                            AlertDialog(
+                            const AlertDialog(
                                 backgroundColor: Colors.black,
                                 title: Center(
                                     child: Text(
@@ -163,13 +164,17 @@ class _LoginPageState extends State<LoginPage> {
                     const SizedBox(width: 20),
                     GestureDetector(
                       onTap: widget.onTap,
-                      child: const Text(
-                        'Üye Ol',
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      child: TextButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, "/registerPage");
+                          },
+                          child: const Text(
+                            'Üye Ol',
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )),
                     ),
                   ],
                 )

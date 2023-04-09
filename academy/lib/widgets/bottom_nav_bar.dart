@@ -34,8 +34,8 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
         children: _pages,
       ),
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.deepPurple,
-        color: Colors.purple,
+        backgroundColor: Color.fromARGB(255, 57, 55, 197),
+        color: Color.fromARGB(255, 45, 28, 122),
         animationDuration: Duration(milliseconds: 300),
         onTap: _onTabTapped,
         items: [
