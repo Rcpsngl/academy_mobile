@@ -1,10 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:video_player/video_player.dart';
-import 'package:flutter/cupertino.dart';
 
 import '../constants/color.dart';
 import '../constants/icons.dart';
@@ -39,7 +35,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.dark,
       child: Scaffold(
-        backgroundColor: Color(0xff102733),
+        backgroundColor: const Color(0xff102733),
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
@@ -49,7 +45,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 IntrinsicHeight(
                   child: Stack(
                     children: [
-                      Align(
+                      const Align(
                         child: Text(
                           "Flutter Hazırlık",
                           style: TextStyle(
@@ -61,15 +57,14 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       Positioned(
                         left: 0,
                         child: CustomIconButton(
+                          height: 35,
+                          width: 35,
+                          onTap: () => Navigator.pop(context),
                           child: const Icon(
                             Icons.arrow_back,
                             color: Colors.white,
                             size: 30,
                           ),
-                          //color: Colors.white,
-                          height: 35,
-                          width: 35,
-                          onTap: () => Navigator.pop(context),
                         ),
                       ),
                     ],
@@ -147,7 +142,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
         ),
         bottomSheet: BottomSheet(
           onClosing: () {},
-          backgroundColor: Color(0xff102733),
+          backgroundColor: const Color(0xff102733),
           enableDrag: false,
           builder: (context) {
             return const SizedBox(
@@ -248,7 +243,7 @@ class _CustomTabViewState extends State<CustomTabView> {
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        color: Color(0xff29404E),
+        color: const Color(0xff29404E),
       ),
       child: Row(
         children: _tags
@@ -333,11 +328,6 @@ class CustomIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Ink(
-      child: InkWell(
-        borderRadius: BorderRadius.circular(12),
-        child: Center(child: child),
-        onTap: onTap,
-      ),
       height: height,
       width: width,
       decoration: BoxDecoration(
@@ -350,6 +340,11 @@ class CustomIconButton extends StatelessWidget {
             spreadRadius: .05,
           ), //BoxShadow
         ],
+      ),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: onTap,
+        child: Center(child: child),
       ),
     );
   }

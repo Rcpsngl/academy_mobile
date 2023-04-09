@@ -16,7 +16,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
   DateTime selectedDay = DateTime.now();
   DateTime focusedDay = DateTime.now();
 
-  TextEditingController _eventController = TextEditingController();
+  final TextEditingController _eventController = TextEditingController();
 
   @override
   void initState() {
@@ -48,13 +48,13 @@ class _CalendarScreenState extends State<CalendarScreen> {
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.arrow_back,
                     color: Colors.white,
                     size: 30,
                   )),
-              SizedBox(width: 20),
-              Text("AKADEMİ TAKVİMİ", style: kMediumText),
+              const SizedBox(width: 20),
+              const Text("AKADEMİ TAKVİMİ", style: kMediumText),
             ],
           )),
       body: SingleChildScrollView(
@@ -140,18 +140,18 @@ class _CalendarScreenState extends State<CalendarScreen> {
           context: context,
           builder: (context) => AlertDialog(
             backgroundColor: kAcikArkaplan,
-            title: Text("Etkinlik", style: kSmallText),
+            title: const Text("Etkinlik", style: kSmallText),
             content: TextFormField(
               controller: _eventController,
               style: kSmallText,
             ),
             actions: [
               TextButton(
-                child: Text("İptal", style: kSmallText),
+                child: const Text("İptal", style: kSmallText),
                 onPressed: () => Navigator.pop(context),
               ),
               TextButton(
-                child: Text("Tamam", style: kSmallText),
+                child: const Text("Tamam", style: kSmallText),
                 onPressed: () {
                   if (_eventController.text.isEmpty) {
                   } else {
@@ -174,11 +174,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
             ],
           ),
         ),
-        label: Text(
+        label: const Text(
           "Etkinlik",
           style: kSmallText,
         ),
-        icon: Icon(Icons.add),
+        icon: const Icon(Icons.add),
       ),
     );
   }

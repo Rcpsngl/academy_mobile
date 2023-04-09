@@ -35,11 +35,12 @@ class _EtkinlikScreenState extends State<EtkinlikScreen> {
         child: Stack(
           children: <Widget>[
             Container(
-              decoration: BoxDecoration(color: Color(0xff102733)),
+              decoration: const BoxDecoration(color: Color(0xff102733)),
             ),
             SingleChildScrollView(
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 60, horizontal: 30),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 60, horizontal: 30),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -49,21 +50,21 @@ class _EtkinlikScreenState extends State<EtkinlikScreen> {
                             onPressed: () {
                               Navigator.pop(context);
                             },
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.arrow_back,
                               color: Colors.white,
                               size: 30,
                             )),
-                        SizedBox(width: 25),
+                        const SizedBox(width: 25),
                         Image.asset(
                           "lib/assets/images/academy.png",
                           height: 48,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 8,
                         ),
                         Row(
-                          children: <Widget>[
+                          children: const <Widget>[
                             Text(
                               "OUA KEŞFET",
                               style: TextStyle(
@@ -74,9 +75,9 @@ class _EtkinlikScreenState extends State<EtkinlikScreen> {
                             ),
                           ],
                         ),
-                        SizedBox(width: 34),
-                        Spacer(),
-                        SizedBox(
+                        const SizedBox(width: 34),
+                        const Spacer(),
+                        const SizedBox(
                           width: 16,
                         ),
                         Image.asset(
@@ -85,14 +86,14 @@ class _EtkinlikScreenState extends State<EtkinlikScreen> {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
                       children: <Widget>[
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
+                          children: const <Widget>[
                             Text(
                               "Merhaba Kullanıcı",
                               style: TextStyle(
@@ -113,11 +114,11 @@ class _EtkinlikScreenState extends State<EtkinlikScreen> {
                             )
                           ],
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Container(
                           decoration: BoxDecoration(
-                            border:
-                                Border.all(width: 3, color: Color(0xffFAE072)),
+                            border: Border.all(
+                                width: 3, color: const Color(0xffFAE072)),
                             borderRadius: BorderRadius.circular(30),
                           ),
                           child: ClipRRect(
@@ -126,7 +127,7 @@ class _EtkinlikScreenState extends State<EtkinlikScreen> {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
 
@@ -147,17 +148,17 @@ class _EtkinlikScreenState extends State<EtkinlikScreen> {
                     ),
 
                     /// Events
-                    SizedBox(
+                    const SizedBox(
                       height: 16,
                     ),
-                    Text(
+                    const Text(
                       "Tüm Etkinlikler",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontFamily: 'Poppins'),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 16,
                     ),
                     Container(
@@ -175,10 +176,10 @@ class _EtkinlikScreenState extends State<EtkinlikScreen> {
                     ),
 
                     /// Popular Events
-                    SizedBox(
+                    const SizedBox(
                       height: 16,
                     ),
-                    Text(
+                    const Text(
                       "Popüler Etkinlikler",
                       style: TextStyle(
                           color: Colors.white,
@@ -221,10 +222,10 @@ class DateTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(right: 10),
-      padding: EdgeInsets.symmetric(horizontal: 10),
+      margin: const EdgeInsets.only(right: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
-          color: isSelected ? Color(0xffFCCD00) : Colors.transparent,
+          color: isSelected ? const Color(0xffFCCD00) : Colors.transparent,
           borderRadius: BorderRadius.circular(10)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -235,7 +236,7 @@ class DateTile extends StatelessWidget {
                 color: isSelected ? Colors.black : Colors.white,
                 fontWeight: FontWeight.w600),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(
@@ -260,10 +261,11 @@ class EventTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      padding: EdgeInsets.symmetric(horizontal: 30),
-      margin: EdgeInsets.only(right: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 30),
+      margin: const EdgeInsets.only(right: 16),
       decoration: BoxDecoration(
-          color: Color(0xff29404E), borderRadius: BorderRadius.circular(12)),
+          color: const Color(0xff29404E),
+          borderRadius: BorderRadius.circular(12)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -271,12 +273,12 @@ class EventTile extends StatelessWidget {
             imgAssetPath,
             height: 27,
           ),
-          SizedBox(
+          const SizedBox(
             height: 12,
           ),
           Text(
             eventType,
-            style: TextStyle(color: Colors.white),
+            style: const TextStyle(color: Colors.white),
           )
         ],
       ),
@@ -296,14 +298,15 @@ class PopularEventTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 100,
-      margin: EdgeInsets.only(bottom: 16),
+      margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
-          color: Color(0xff29404E), borderRadius: BorderRadius.circular(8)),
+          color: const Color(0xff29404E),
+          borderRadius: BorderRadius.circular(8)),
       child: Row(
         children: <Widget>[
           Expanded(
             child: Container(
-              padding: EdgeInsets.only(left: 16),
+              padding: const EdgeInsets.only(left: 16),
               width: MediaQuery.of(context).size.width - 100,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -311,39 +314,39 @@ class PopularEventTile extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     desc,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.white,
                         fontSize: 19,
                         fontFamily: 'Poppins'),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 2,
                   ),
                   Row(
                     children: <Widget>[
-                      SizedBox(
+                      const SizedBox(
                         width: 2,
                       ),
                       Text(
                         date,
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.white,
                             fontSize: 15,
                             fontFamily: 'Poppins'),
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 2,
                   ),
                   Row(
                     children: <Widget>[
-                      SizedBox(
+                      const SizedBox(
                         width: 3,
                       ),
                       Text(
                         address,
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.white,
                             fontSize: 10,
                             fontFamily: 'Poppins'),
@@ -354,7 +357,7 @@ class PopularEventTile extends StatelessWidget {
               ),
             ),
           ),
-          ClipRRect(
+          const ClipRRect(
             borderRadius: BorderRadius.only(
                 topRight: Radius.circular(8), bottomRight: Radius.circular(8)),
           )

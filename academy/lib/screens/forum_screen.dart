@@ -136,6 +136,7 @@ class _ForumScreenState extends State<ForumScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: kKoyuArkaplan,
         appBar: AppBar(
           title: const Text('Forum'),
           backgroundColor: kKoyuArkaplan,
@@ -173,7 +174,7 @@ class _ForumScreenState extends State<ForumScreen> {
                             style: kSmallText,
                           ),
                         ),
-                        Divider(thickness: 2),
+                        const Divider(thickness: 2),
                         ListTile(
                           //leading: Icon(Icons.arrow_drop_down_circle),
                           title:
@@ -189,9 +190,7 @@ class _ForumScreenState extends State<ForumScreen> {
                                   FontAwesomeIcons.heart,
                                   color: Colors.white,
                                 ),
-                                onPressed: () {
-                                  print("Pressed");
-                                }),
+                                onPressed: () {}),
                             Text(documentSnapshot['comment'],
                                 style: kSmallText),
                             IconButton(
@@ -201,9 +200,7 @@ class _ForumScreenState extends State<ForumScreen> {
                                   FontAwesomeIcons.comment,
                                   color: Colors.white,
                                 ),
-                                onPressed: () {
-                                  print("Pressed");
-                                }),
+                                onPressed: () {}),
                           ],
                         ),
                       ],

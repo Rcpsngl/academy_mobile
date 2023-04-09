@@ -20,11 +20,11 @@ class NotificationTiles extends StatelessWidget {
       leading: Container(
           height: 50.0,
           width: 50.0,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image:
                   DecorationImage(image: AssetImage(logo), fit: BoxFit.cover))),
-      title: Text(title, style: TextStyle(color: kDarkColor)),
-      subtitle: Text(subtitle, style: TextStyle(color: kLightColor)),
+      title: Text(title, style: const TextStyle(color: kDarkColor)),
+      subtitle: Text(subtitle, style: const TextStyle(color: kLightColor)),
       onTap: onTap(),
       enabled: enable,
     );

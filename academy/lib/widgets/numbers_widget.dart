@@ -17,12 +17,12 @@ class NumbersWidget extends StatelessWidget {
       );
   Widget buildDivider() => Container(
         height: 24,
-        child: VerticalDivider(),
+        child: const VerticalDivider(),
       );
 
   Widget buildButton({required String text, required int value}) =>
       MaterialButton(
-        padding: EdgeInsets.symmetric(vertical: 4),
+        padding: const EdgeInsets.symmetric(vertical: 4),
         onPressed: () {},
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
         child: Column(
@@ -31,13 +31,13 @@ class NumbersWidget extends StatelessWidget {
           children: [
             Text(
               '$value',
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Poppins'),
+              style: const TextStyle(
+                  fontWeight: FontWeight.bold, fontFamily: 'Poppins'),
             ),
-            SizedBox(height: 2),
+            const SizedBox(height: 2),
             Text(
               text,
-              style: TextStyle(fontFamily: 'Poppins', fontSize: 16),
+              style: const TextStyle(fontFamily: 'Poppins', fontSize: 16),
             )
           ],
         ),

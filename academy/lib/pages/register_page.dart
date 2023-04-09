@@ -22,7 +22,7 @@ class _RegisterPageState extends State<RegisterPage> {
     showDialog(
       context: context,
       builder: (context) {
-        return Center(child: CircularProgressIndicator());
+        return const Center(child: CircularProgressIndicator());
       },
     );
     //kayıt ol
@@ -51,7 +51,7 @@ class _RegisterPageState extends State<RegisterPage> {
               title: Center(
                   child: Text(
                 message,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               )));
         });
   }
@@ -59,7 +59,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff102733),
+      backgroundColor: const Color(0xff102733),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Center(
@@ -77,7 +77,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 const SizedBox(height: 20),
 
                 // akademiye hosgeldiniz
-                Text(
+                const Text(
                   "Lütfen Bilgileri Eksiksiz Doldurun",
                   style: TextStyle(
                     color: Colors.white,
@@ -144,7 +144,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       'Zaten Hesabınız Varsa',
                       style: TextStyle(color: Colors.white, fontSize: 16),
                     ),

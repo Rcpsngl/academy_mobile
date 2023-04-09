@@ -1,9 +1,6 @@
 import 'package:academy/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../constants/color.dart';
-import '../constants/icons.dart';
-import '../constants/size.dart';
 import '../widgets/custom_nav_bar.dart';
 import 'featured_screen.dart';
 import 'notification_screen.dart';
@@ -16,19 +13,19 @@ class BaseScreen extends StatefulWidget {
 }
 
 class _BaseScreenState extends State<BaseScreen> {
-  int _selectedIndex = 0;
+  final int _selectedIndex = 0;
 
-  static List<Widget> _pages = <Widget>[
-    FeaturedScreen(),
+  static final List<Widget> _pages = <Widget>[
+    const FeaturedScreen(),
     NotificationScreen(),
-    SettingsScreen(),
+    const SettingsScreen(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff102733),
+      backgroundColor: const Color(0xff102733),
       body: _pages[_selectedIndex],
-      bottomNavigationBar: CustomNavigationBar(),
+      bottomNavigationBar: const CustomNavigationBar(),
     );
   }
 }

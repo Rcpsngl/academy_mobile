@@ -47,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
               title: Center(
                   child: Text(
                 message,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               )));
         });
   }
@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff102733),
+      backgroundColor: const Color(0xff102733),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Center(
@@ -73,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 20),
 
                 // akademiye hosgeldiniz
-                Text(
+                const Text(
                   "Akademi Mobil'e Hoşgeldiniz",
                   style: TextStyle(
                     color: Colors.white,
@@ -110,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                   text: 'Giriş Yap',
                   onTap: signUserIn,
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Center(

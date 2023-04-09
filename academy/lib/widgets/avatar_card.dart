@@ -2,8 +2,6 @@ import 'package:academy/constants/color.dart';
 import 'package:academy/constants/icons.dart';
 import 'package:flutter/material.dart';
 
-import '../constants/constants.dart';
-
 class AvatarCard extends StatelessWidget {
   const AvatarCard({
     super.key,
@@ -24,8 +22,8 @@ class AvatarCard extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            const Text("Recep Şengül", style: kLargeText),
+          children: const [
+            Text("Recep Şengül", style: kLargeText),
           ],
         )
       ],
