@@ -41,7 +41,7 @@ List<Lesson> lessonList = [
     duration: '5 dakika',
     isCompleted: false,
     isPlaying: false,
-    name: "Koşul Ve Döngüler",
+    name: "Koşullar",
   ),
   Lesson(
     duration: '5 min',
@@ -53,7 +53,7 @@ List<Lesson> lessonList = [
     duration: '5 min',
     isCompleted: false,
     isPlaying: false,
-    name: "",
+    name: "Döngüler",
   ),
   Lesson(
     duration: '5 min',
