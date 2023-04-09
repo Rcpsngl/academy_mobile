@@ -50,8 +50,9 @@ class _EtkinlikScreenState extends State<EtkinlikScreen> {
                               Navigator.pop(context);
                             },
                             icon: Icon(
-                              CupertinoIcons.return_icon,
+                              Icons.arrow_back,
                               color: Colors.white,
+                              size: 30,
                             )),
                         SizedBox(width: 25),
                         Image.asset(

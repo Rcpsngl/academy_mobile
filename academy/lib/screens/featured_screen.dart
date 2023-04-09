@@ -4,8 +4,6 @@ import 'package:flutter/services.dart';
 import '../constants/color.dart';
 import '../constants/size.dart';
 import '../models/category.dart';
-import '../widgets/circle_button.dart';
-import 'course_screen.dart';
 
 class FeaturedScreen extends StatefulWidget {
   const FeaturedScreen({Key? key}) : super(key: key);

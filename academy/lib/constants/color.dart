@@ -31,8 +31,8 @@ const kMediumText = TextStyle(
     color: Colors.white,
     fontSize: 24);
 
-const kgeriTus = Icon(
-  CupertinoIcons.return_icon,
-  color: Colors.white,
-  size: 30,
-);
+Widget kgeriTus = IconButton(
+    icon: Icon(Icons.arrow_back),
+    color: Colors.white,
+    iconSize: 30,
+    onPressed: () {});

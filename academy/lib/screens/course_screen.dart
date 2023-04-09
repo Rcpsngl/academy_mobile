@@ -45,8 +45,15 @@ class _CourseScreenState extends State<CourseScreen> {
                       Positioned(
                         left: 5,
                         top: 10,
-                        child: kgeriTus,
-                      ),
+                        child: IconButton(
+                          icon: Icon(Icons.arrow_back),
+                          color: Colors.white,
+                          iconSize: 30,
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                        ),
+                      )
                     ],
                   ),
                 ),

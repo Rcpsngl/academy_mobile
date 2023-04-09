@@ -61,7 +61,12 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       Positioned(
                         left: 0,
                         child: CustomIconButton(
-                          child: const Icon(Icons.arrow_back),
+                          child: const Icon(
+                            Icons.arrow_back,
+                            color: Colors.white,
+                            size: 30,
+                          ),
+                          //color: Colors.white,
                           height: 35,
                           width: 35,
                           onTap: () => Navigator.pop(context),

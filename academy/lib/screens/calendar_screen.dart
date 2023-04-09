@@ -49,11 +49,12 @@ class _CalendarScreenState extends State<CalendarScreen> {
                     Navigator.pop(context);
                   },
                   icon: Icon(
-                    CupertinoIcons.return_icon,
+                    Icons.arrow_back,
                     color: Colors.white,
+                    size: 30,
                   )),
               SizedBox(width: 20),
-              Text("AKADEMİ TAKVİMİM", style: kMediumText),
+              Text("AKADEMİ TAKVİMİ", style: kMediumText),
             ],
           )),
       body: Column(

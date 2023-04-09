@@ -13,18 +13,18 @@ class Category {
 List<Category> categoryList = [
   Category(
     name: 'Eğitimler',
-    thumbnail: 'lib/assets/images/education.png',
+    thumbnail: 'lib/assets/images/egitim2.png',
   ),
   Category(
     name: 'OUA Forum',
-    thumbnail: 'lib/assets/images/menu.png',
+    thumbnail: 'lib/assets/images/forum3.png',
   ),
   Category(
     name: 'Etkinlikler',
-    thumbnail: 'lib/assets/images/sports.png',
+    thumbnail: 'lib/assets/images/etkinlik1.png',
   ),
   Category(
     name: 'Takvim',
-    thumbnail: 'lib/assets/images/notify.png',
+    thumbnail: 'lib/assets/images/takvim5.png',
   ),
 ];

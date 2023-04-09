@@ -1,5 +1,5 @@
 import 'package:academy/constants/color.dart';
-import 'package:academy/widgets/bottom_nav_bar.dart';
+import 'package:academy/widgets/custom_nav_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -30,15 +30,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                IconButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, "/baseScreen");
-                    },
-                    icon: Icon(
-                      CupertinoIcons.back,
-                      color: Colors.white,
-                      size: 30,
-                    )),
                 const AvatarCard(),
                 const SizedBox(height: 20),
                 const Divider(),

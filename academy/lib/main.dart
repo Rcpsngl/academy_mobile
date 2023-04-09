@@ -12,7 +12,7 @@ import 'package:academy/screens/featured_screen.dart';
 import 'package:academy/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'notification/notificationList.dart';
-import 'notification/notificationPage.dart';
+import 'screens/notification_screen.dart';
 import 'pages/login_page.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -48,8 +48,8 @@ class MyApp extends StatelessWidget {
       "/detailsScreen": (context) => DetailsScreen(title: 'asd'),
       "/featuredScreen": (context) => FeaturedScreen(),
       "/settingsScreen": (context) => SettingsScreen(),
-      "/bildirim":(context)=> NotificationPage(),
-      "/bildirim-pace":(context)=> NotificationList(),
+      "/bildirimScreen": (context) => NotificationScreen(),
+      "/bildirim-pace": (context) => NotificationList(),
       "/etkinlikScreen": (context) => EtkinlikScreen(),
       "/calendarScreen": (context) => CalendarScreen(),
     }, debugShowCheckedModeBanner: false, home: BaseScreen());
