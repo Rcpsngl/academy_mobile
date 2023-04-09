@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-
 import '../constants/icons.dart';
 
 class CustomVideoPlayer extends StatefulWidget {
@@ -50,7 +49,7 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
               },
               child: Image.asset(
                 icLearning,
-                height: 50,
+                height: 10,
               ),
             );
           });
