@@ -1,6 +1,7 @@
 import 'package:academy/screens/featured_screen.dart';
 import 'package:academy/screens/notification_screen.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../screens/settings_screen.dart';
@@ -40,7 +41,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
         items: [
           Icon(Icons.home, color: Colors.white),
           Icon(
-            Icons.notifications,
+            Icons.assured_workload_outlined,
             color: Colors.white,
           ),
           Icon(

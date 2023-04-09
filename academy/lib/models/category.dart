@@ -17,7 +17,7 @@ List<Category> categoryList = [
   ),
   Category(
     name: 'OUA Forum',
-    thumbnail: 'lib/assets/images/forum2.png',
+    thumbnail: 'lib/assets/images/forum3.png',
   ),
   Category(
     name: 'Etkinlikler',
