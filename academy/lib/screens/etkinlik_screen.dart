@@ -45,6 +45,15 @@ class _EtkinlikScreenState extends State<EtkinlikScreen> {
                   children: <Widget>[
                     Row(
                       children: <Widget>[
+                        IconButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            icon: Icon(
+                              CupertinoIcons.return_icon,
+                              color: Colors.white,
+                            )),
+                        SizedBox(width: 25),
                         Image.asset(
                           "lib/assets/images/academy.png",
                           height: 48,
@@ -65,19 +74,7 @@ class _EtkinlikScreenState extends State<EtkinlikScreen> {
                           ],
                         ),
                         SizedBox(width: 34),
-                        IconButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            icon: Icon(
-                              CupertinoIcons.return_icon,
-                              color: Colors.white,
-                            )),
                         Spacer(),
-                        Image.asset(
-                          "lib/assets/images/notify.png",
-                          height: 22,
-                        ),
                         SizedBox(
                           width: 16,
                         ),

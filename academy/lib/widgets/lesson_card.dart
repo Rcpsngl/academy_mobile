@@ -1,3 +1,4 @@
+import 'package:academy/constants/color.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/icons.dart';
@@ -27,13 +28,7 @@ class LessonCard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                lesson.name,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
+              Text(lesson.name, style: kSmallText),
               Text(
                 lesson.duration,
                 style: const TextStyle(

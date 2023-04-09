@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:video_player/video_player.dart';
+import 'package:flutter/cupertino.dart';
 
 import '../constants/color.dart';
 import '../constants/icons.dart';
@@ -164,7 +165,7 @@ class PlayList extends StatelessWidget {
       child: ListView.separated(
         separatorBuilder: (_, __) {
           return const SizedBox(
-            height: 20,
+            height: 10,
           );
         },
         padding: const EdgeInsets.only(top: 20, bottom: 40),
@@ -230,12 +231,7 @@ class _CustomTabViewState extends State<CustomTabView> {
           color: widget.index == index ? kPrimaryColor : null,
           borderRadius: BorderRadius.circular(10),
         ),
-        child: Text(
-          _tags[index],
-          style: TextStyle(
-            color: widget.index != index ? Colors.black : Colors.white,
-          ),
-        ),
+        child: Text(_tags[index], style: kVerySmallText),
       ),
     );
   }
@@ -271,10 +267,10 @@ class _EnrollBottomSheetState extends State<EnrollBottomSheet> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 20,
+      height: 0,
       child: Padding(
         padding: const EdgeInsets.symmetric(
-          horizontal: 30.0,
+          horizontal: 20.0,
         ),
         child: Row(
           children: [
@@ -325,7 +321,7 @@ class CustomIconButton extends StatelessWidget {
     required this.child,
     required this.height,
     required this.width,
-    this.color = Colors.grey,
+    this.color = Colors.transparent,
     required this.onTap,
   }) : super(key: key);
 

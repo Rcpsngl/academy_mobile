@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:academy/pages/auth_page.dart';
+import 'package:academy/screens/calendar_screen.dart';
 import 'package:academy/screens/forum_screen.dart';
 import 'package:academy/pages/login_or_register_page.dart';
 import 'package:academy/pages/register_page.dart';
@@ -13,7 +14,7 @@ import 'package:flutter/material.dart';
 import 'pages/login_page.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
-
+import 'package:intl/date_symbol_data_local.dart';
 import 'screens/base_screen.dart';
 import 'screens/course_screen.dart';
 import 'screens/details_screen.dart';
@@ -23,6 +24,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await initializeDateFormatting();
   runApp(const MyApp());
 }
 
@@ -46,6 +48,7 @@ class MyApp extends StatelessWidget {
       "/settingsScreen": (context) => SettingsScreen(),
       "/profileScreen": (context) => ProfileScreen(),
       "/etkinlikScreen": (context) => EtkinlikScreen(),
+      "/calendarScreen": (context) => CalendarScreen(),
     }, debugShowCheckedModeBanner: false, home: BaseScreen());
   }
 }

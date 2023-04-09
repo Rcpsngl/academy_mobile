@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 const kPrimaryColor = Color(0xff6849ef);
@@ -19,3 +20,19 @@ const kSmallText = TextStyle(
     fontFamily: 'Poppins-Medium',
     color: Colors.white,
     fontSize: 18);
+const kVerySmallText = TextStyle(
+    fontWeight: FontWeight.normal,
+    fontFamily: 'Poppins-Medium',
+    color: Colors.white,
+    fontSize: 14);
+const kMediumText = TextStyle(
+    fontWeight: FontWeight.normal,
+    fontFamily: 'Poppins-Medium',
+    color: Colors.white,
+    fontSize: 24);
+
+const kgeriTus = Icon(
+  CupertinoIcons.return_icon,
+  color: Colors.white,
+  size: 30,
+);
