@@ -1,3 +1,4 @@
+import 'package:academy/constants/color.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -135,7 +136,7 @@ class _ForumScreenState extends State<ForumScreen> {
     return Scaffold(
         appBar: AppBar(
           title: const Text('Forum'),
-          backgroundColor: Colors.green,
+          backgroundColor: kKoyuArkaplan,
           centerTitle: true,
         ),
         body: StreamBuilder(
@@ -149,7 +150,7 @@ class _ForumScreenState extends State<ForumScreen> {
                       streamSnapshot.data!.docs[index];
                   return Card(
                     clipBehavior: Clip.antiAlias,
-                    color: Color.fromARGB(255, 240, 239, 239),
+                    color: kAcikArkaplan,
                     elevation: 5,
                     shape: RoundedRectangleBorder(
                       side: const BorderSide(
@@ -161,36 +162,43 @@ class _ForumScreenState extends State<ForumScreen> {
                       children: [
                         ListTile(
                           //leading: Icon(Icons.arrow_drop_down_circle),
-                          title: Text(documentSnapshot['name']),
+                          title: Text(
+                            documentSnapshot['name'],
+                            style: kLargeText,
+                          ),
                           subtitle: Text(
                             'Secondary Text',
-                            style:
-                                TextStyle(color: Colors.black.withOpacity(0.6)),
+                            style: kSmallText,
                           ),
                         ),
                         Divider(thickness: 2),
                         ListTile(
                           //leading: Icon(Icons.arrow_drop_down_circle),
-                          title: Text(documentSnapshot['text']),
+                          title:
+                              Text(documentSnapshot['text'], style: kSmallText),
                         ),
                         ButtonBar(
                           alignment: MainAxisAlignment.start,
                           children: [
-                            Text(documentSnapshot['like']),
+                            Text(documentSnapshot['like'], style: kSmallText),
                             IconButton(
                                 // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
                                 icon: const FaIcon(
-                                  FontAwesomeIcons.solidHeart,
-                                  color: Colors.red,
+                                  FontAwesomeIcons.heart,
+                                  color: Colors.white,
                                 ),
                                 onPressed: () {
                                   print("Pressed");
                                 }),
-                            Text(documentSnapshot['comment']),
+                            Text(documentSnapshot['comment'],
+                                style: kSmallText),
                             IconButton(
                                 padding: EdgeInsets.zero,
                                 // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
-                                icon: const FaIcon(FontAwesomeIcons.comment),
+                                icon: const FaIcon(
+                                  FontAwesomeIcons.comment,
+                                  color: Colors.white,
+                                ),
                                 onPressed: () {
                                   print("Pressed");
                                 }),
@@ -210,7 +218,7 @@ class _ForumScreenState extends State<ForumScreen> {
         ),
 // Add new product
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.green,
+          backgroundColor: kNavBar2,
           onPressed: () => _create(),
           child: const Icon(Icons.add),
         ),

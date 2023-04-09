@@ -1,3 +1,4 @@
+import 'package:academy/constants/color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -28,14 +29,7 @@ class SettingTile extends StatelessWidget {
             child: Icon(setting.icon, color: kprimaryColor),
           ),
           const SizedBox(width: 10),
-          Text(
-            setting.title,
-            style: const TextStyle(
-              color: kprimaryColor,
-              fontSize: ksmallFontSize,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+          Text(setting.title, style: kSmallText),
           const Spacer(),
           Icon(
             CupertinoIcons.chevron_forward,

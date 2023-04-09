@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../data/data.dart';
+import '../models/data.dart';
 import '../models/data_model.dart';
 import '../models/event_type_model.dart';
 import '../models/events_model.dart';

@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:academy/pages/auth_page.dart';
-import 'package:academy/pages/forum_screen.dart';
+import 'package:academy/screens/forum_screen.dart';
 import 'package:academy/pages/login_or_register_page.dart';
 import 'package:academy/pages/register_page.dart';
 import 'package:academy/screens/etkinlik_screen.dart';

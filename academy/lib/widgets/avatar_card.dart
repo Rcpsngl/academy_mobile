@@ -1,3 +1,4 @@
+import 'package:academy/constants/color.dart';
 import 'package:academy/constants/icons.dart';
 import 'package:flutter/material.dart';
 
@@ -12,24 +13,19 @@ class AvatarCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Image.asset(
-          icPerson,
-          width: 80,
-          height: 80,
+        ClipOval(
+          child: Image.asset(
+            icPerson,
+            width: 80,
+            height: 80,
+          ),
         ),
         const SizedBox(width: 10),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text(
-              "Şahıs İsmi",
-              style: TextStyle(
-                fontSize: kbigFontSize,
-                fontWeight: FontWeight.bold,
-                color: kprimaryColor,
-              ),
-            ),
+            const Text("Şahıs İsmi", style: kLargeText),
           ],
         )
       ],

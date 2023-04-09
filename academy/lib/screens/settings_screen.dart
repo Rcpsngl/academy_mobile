@@ -1,3 +1,4 @@
+import 'package:academy/constants/color.dart';
 import 'package:academy/widgets/bottom_nav_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kKoyuArkaplan,
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 20),
         child: Center(
@@ -34,6 +36,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     },
                     icon: Icon(
                       CupertinoIcons.back,
+                      color: Colors.white,
                       size: 30,
                     )),
                 const AvatarCard(),

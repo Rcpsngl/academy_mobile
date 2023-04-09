@@ -1,8 +1,8 @@
 import 'dart:math';
 
-import '../models/data_model.dart';
-import '../models/event_type_model.dart';
-import '../models/events_model.dart';
+import 'data_model.dart';
+import 'event_type_model.dart';
+import 'events_model.dart';
 
 List<DateModel> getDates() {
   List<DateModel> dates = <DateModel>[];
