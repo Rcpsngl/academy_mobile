@@ -5,6 +5,7 @@ const kPrimaryColor = Color(0xff6849ef);
 const kPrimaryLight = Color(0xff8a72f1);
 
 const kKoyuArkaplan = Color(0xff102733);
+
 const kAcikArkaplan = Color(0xff29404E);
 
 const kNavBar = Color.fromARGB(187, 1, 13, 83);
