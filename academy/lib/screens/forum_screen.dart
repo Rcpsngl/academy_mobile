@@ -216,10 +216,17 @@ class _ForumScreenState extends State<ForumScreen> {
           },
         ),
 // Ekleme fonk.
-        floatingActionButton: FloatingActionButton(
+        floatingActionButton: FloatingActionButton.extended(
+          label: Text(
+            "Ekle",
+            style: kMediumText,
+          ),
           backgroundColor: kNavBar2,
           onPressed: () => _create(),
-          child: const Icon(Icons.add),
+          icon: const Icon(
+            Icons.add,
+            size: 25,
+          ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat);
   }
