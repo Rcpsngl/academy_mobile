@@ -21,7 +21,8 @@ kurduktan sonra flutter pub get ile dependencies'leri indirmeyi unutma!!
 - Forum: Bu future ile akademi mobil kullanıcıları ile sohbet edebilirsiniz (realtime çalışıyor Firebase ile yapıldı)
 - Etkinlikler: Bu future ile sosyalleşebilir diğer akademi bursiyerleri ile beraber etkinlikler düzenleyebilir ya da katılabilirsiniz
 - Takvim: Bu future ile akademinin etkinliklerinde haberdar olablir ödevlerin teslim tarihini görebilir ve kendiniz yeni etkinlik ekleyebilirsiniz
- https://user-images.githubusercontent.com/114760131/230795279-1d73b0bb-6eb7-43a7-8bc6-3984adcd3f65.mp4
+
+https://user-images.githubusercontent.com/114760131/230795279-1d73b0bb-6eb7-43a7-8bc6-3984adcd3f65.mp4
 ### Contributors
 
 - [Aslı Deniz Ürersoy](https://github.com/denizurersoy) 
