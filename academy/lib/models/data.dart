@@ -123,29 +123,29 @@ List<EventsModel> getEvents() {
 
   //3
   eventsModel.date = "27 Nisan 2023";
-  eventsModel.address = "AYBU Game Club Meeting";
-  eventsModel.desc = "Fidanlık, Adakale Sk. No:27 D:6, 06420 ";
+  eventsModel.address = "Fidanlık, Adakale Sk. No:27 D:6, 06420";
+  eventsModel.desc = "AYBU Game Club Meeting ";
   events.add(eventsModel);
 
   eventsModel = EventsModel();
   //4
   eventsModel.date = "3 Mayıs 2023";
-  eventsModel.address = "Halısaha Maçı";
-  eventsModel.desc = "Fidanlık, Adakale Sk. No:27 D:6, 06420";
+  eventsModel.address = "Fidanlık, Adakale Sk. No:27 D:6, 06420";
+  eventsModel.desc = "Halısaha Maçı";
   events.add(eventsModel);
 
   eventsModel = EventsModel();
   //5
   eventsModel.date = "7 Mayıs 2023";
-  eventsModel.address = "Lazer Counter";
-  eventsModel.desc = "Fidanlık, Adakale Sk. No:27 D:6, 06420";
+  eventsModel.address = "Fidanlık, Adakale Sk. No:27 D:6, 06420";
+  eventsModel.desc = "Lazer Counter";
   events.add(eventsModel);
 
   eventsModel = EventsModel();
   //6
   eventsModel.date = "17 Mayıs 2023";
-  eventsModel.address = "Masa Tenisi Turnuvası İstanbul";
-  eventsModel.desc = "Fidanlık, Adakale Sk. No:27 D:6, 06420 ";
+  eventsModel.address = "Fidanlık, Adakale Sk. No:27 D:6, 06420";
+  eventsModel.desc = "Masa Tenisi Turnuvası İstanbul ";
   events.add(eventsModel);
 
   eventsModel = EventsModel();
