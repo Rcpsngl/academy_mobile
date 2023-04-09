@@ -42,7 +42,7 @@ class Body extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
+              const Text(
                 "Kategoriler",
                 style: TextStyle(
                     color: Colors.white, fontFamily: 'Poppins', fontSize: 22),
@@ -138,6 +138,9 @@ class CategoryCard extends StatelessWidget {
             ),
             const SizedBox(
               height: 10,
+            ),
+            SizedBox(
+              height: 20,
             ),
             Center(
               child: Text(
