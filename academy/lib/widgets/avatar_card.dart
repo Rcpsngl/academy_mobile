@@ -25,7 +25,7 @@ class AvatarCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text("Şahıs İsmi", style: kLargeText),
+            const Text("Recep Şengül", style: kLargeText),
           ],
         )
       ],
