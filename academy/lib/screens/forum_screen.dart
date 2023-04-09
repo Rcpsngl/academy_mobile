@@ -34,12 +34,12 @@ class _ForumScreenState extends State<ForumScreen> {
               children: [
                 TextField(
                   controller: _nameController,
-                  decoration: const InputDecoration(labelText: 'Name'),
+                  decoration: const InputDecoration(labelText: 'Baslık'),
                 ),
                 TextField(
                   controller: _text,
                   decoration: const InputDecoration(
-                    labelText: 'Text',
+                    labelText: 'Ne düşünüyorsun ?',
                   ),
                 ),
                 const SizedBox(
@@ -55,7 +55,8 @@ class _ForumScreenState extends State<ForumScreen> {
                         "name": name,
                         "text": text,
                         'like': '0',
-                        'comment': ''
+                        'comment': '',
+                        'user': 'Aslı Deniz',
                       });
 
                       _nameController.text = '';
@@ -167,7 +168,7 @@ class _ForumScreenState extends State<ForumScreen> {
                             style: kLargeText,
                           ),
                           subtitle: Text(
-                            'Secondary Text',
+                            documentSnapshot['user'],
                             style: kSmallText,
                           ),
                         ),
