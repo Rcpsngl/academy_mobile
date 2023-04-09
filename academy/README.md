@@ -1,6 +1,7 @@
-# academy
+# Academy Mobil
 
-A new Flutter project.
+Merhaba,uygulamamız akademinin tüm içeriklerine tek bir platform üzerinden erişimi sağlıyor,videoların altındaki soru bölümüyle öğrenciler sorularına daha hızlı  bir şekilde cevap alabiliyor ve bu sayede öğrenciler öğretmenleriyle de  iletişimde kalabiliyor.İlk olarak giriş yap ve kayıt ol sayfalarını görüyorsunuz. bu kısmı firebase kullanarak geliştirdik. Ayrica bildirimler geldigi ve takvimimizde etkinlikler oluşturabildiğimiz için hicbir duyuru ve yeniligi kacirmiyoruz. Foruma uğramayı da unutmayın. Forum sayesinde akademideki kullanıcılarla sohbet edebilir merak ettiklerinizi sorabilirsiniz. Her şeyin bir arada olduğu  akademi mobil uygulamamız sayesinde her şey elimizin altında!
+
 
 ## Getting Started
 
