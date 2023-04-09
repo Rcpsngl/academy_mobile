@@ -6,10 +6,12 @@ import 'package:academy/pages/login_or_register_page.dart';
 import 'package:academy/pages/register_page.dart';
 import 'package:academy/screens/etkinlik_screen.dart';
 import 'package:academy/screens/featured_screen.dart';
-import 'package:academy/screens/profile_screen.dart';
+
 //import 'package:academy/screens/profile_screen.dart';
 import 'package:academy/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
+import 'notification/notificationList.dart';
+import 'notification/notificationPage.dart';
 import 'pages/login_page.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -44,8 +46,10 @@ class MyApp extends StatelessWidget {
       "/detailsScreen": (context) => DetailsScreen(title: 'asd'),
       "/featuredScreen": (context) => FeaturedScreen(),
       "/settingsScreen": (context) => SettingsScreen(),
-      "/profileScreen": (context) => ProfileScreen(),
+      "/bildirim":(context)=> NotificationPage(),
+      "/bildirim-pace":(context)=> NotificationList(),
       "/etkinlikScreen": (context) => EtkinlikScreen(),
-    }, debugShowCheckedModeBanner: false, home: BaseScreen());
+    }, debugShowCheckedModeBanner: false, home: NotificationPage());
   }
 }
+

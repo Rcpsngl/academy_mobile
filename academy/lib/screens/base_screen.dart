@@ -1,4 +1,4 @@
-import 'package:academy/screens/profile_screen.dart';
+
 import 'package:academy/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +20,7 @@ class _BaseScreenState extends State<BaseScreen> {
 
   static const List<Widget> _pages = <Widget>[
     FeaturedScreen(),
-    ProfileScreen(),
+    
     SettingsScreen(),
   ];
   @override

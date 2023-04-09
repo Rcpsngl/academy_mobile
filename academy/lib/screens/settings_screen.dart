@@ -32,7 +32,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               children: [
                 IconButton(
                     onPressed: () {
-                      Navigator.pop(context);
+                      Navigator.pushNamed(context, "/baseScreen");
                     },
                     icon: Icon(
                       CupertinoIcons.back,
