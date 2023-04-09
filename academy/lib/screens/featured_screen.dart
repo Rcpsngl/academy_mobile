@@ -176,8 +176,8 @@ class AppBar extends StatelessWidget {
           end: Alignment.bottomRight,
           stops: [0.1, 0.5],
           colors: [
-            Color.fromARGB(255, 57, 55, 197),
-            Color.fromARGB(255, 45, 28, 122),
+            Color.fromARGB(187, 1, 13, 83),
+            Color.fromARGB(255, 28, 19, 70),
           ],
         ),
       ),
