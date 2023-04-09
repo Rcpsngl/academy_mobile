@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
+<<<<<<< HEAD:academy/lib/screens/notification_screen.dart
 import '../constants/constants.dart';
+=======
+import '../constants/color.dart';
+
+class NotificationPage extends StatefulWidget {
+  
+>>>>>>> 0943be23958ecf1972d823e9e8e9823863e3b5bd:academy/lib/notification/notificationPage.dart
 
 class NotificationScreen extends StatefulWidget {
   @override
@@ -11,10 +18,17 @@ class _NotificationScreenState extends State<NotificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kWhiteColor,
+      backgroundColor: kKoyuArkaplan,
       appBar: AppBar(
+<<<<<<< HEAD:academy/lib/screens/notification_screen.dart
         title: Text('Akademi Duyuru'),
       ),
+=======
+          title: const Text('Akademi Duyuru', style: kMediumText,),
+          backgroundColor: kKoyuArkaplan,
+          centerTitle: true,
+        ),
+>>>>>>> 0943be23958ecf1972d823e9e8e9823863e3b5bd:academy/lib/notification/notificationPage.dart
       body: FittedBox(
         child: Container(
           // height: MediaQuery.of(context).size.height,
@@ -22,25 +36,57 @@ class _NotificationScreenState extends State<NotificationScreen> {
           margin: EdgeInsets.all(kFixPadding),
           padding: EdgeInsets.all(kFixPadding),
           decoration: BoxDecoration(
-              color: kWhiteColor,
+              color: kAcikArkaplan,
               shape: BoxShape.rectangle,
               borderRadius: BorderRadius.circular(8.0),
               boxShadow: [BoxShadow(color: kLightColor, blurRadius: 2.0)]),
           child: Column(
-            children: [
+            children: [ 
               Text(
-                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-                  style: kDarkTextStyle),
-              SizedBox(height: 16.0),
+                  'Akademi Çağrı Hattı',
+                  style: kMediumText ),
+              SizedBox(height: 8.0),
               Image(image: AssetImage(manShoes)),
-              SizedBox(height: 16.0),
+              SizedBox(height: 8.0),
               Text(
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-                  style: TextStyle(color: kLightColor)),
+                  '''Merhaba Aslı Deniz, Akademi'de Mart görevleri için verilen ek sürenin de sonuna geldik, güncel durumun şöyle:
+Teknik Eğitim: Tamamlandı
+Coursera: Tamamlandı
+Girişimcilik Eğitimi: Tamamlandı
+İngilizce Eğitimi: Tamamlandı
+Genel Özet: Görevler Tamamlandı
+*Bu verilerde 7 Nisan 2023 tarihi baz alınmıştır.
+*Lütfen sorular için Slack kanallarından bize ulaşın.''',
+                  style: TextStyle(color: Colors.white)),
               SizedBox(height: 16.0),
               Align(
                 alignment: Alignment.centerRight,
-                child: Text('11/Feb/2021 04:42 PM',
+                child: Text('07/04/2023 02:45',
+                    style: TextStyle(color: kLightColor)),
+              ),SizedBox(height: 60),Text(
+                  'Akademi Önemli Duyuru',
+                  style: kMediumText ),
+              SizedBox(height: 8.0),
+              Image(image: AssetImage(manShoes)),
+              SizedBox(height: 8.0),
+              Text(
+                  '''Bir önceki iletide yer alan Teknik Eğitim Tamamlama Durumu verilerinde bir karışıklık yaşanmış olup, en güncell halini sizlerle tekrardan paylaşıyoruz.
+Merhaba Aslı Deniz Ürersoy, Akademi'de Mart ayının sonuna geldik, güncel durumun şöyle:
+Teknik Eğitim: Tamamlanmadı
+Coursera: Tamamlanmadı
+Girişimcilik Eğitimi: Tamamlanmadı
+İngilizce Eğitimi: Tamamlandı
+Genel Özet: Görevler Tamamlanmadı
+Bu listeye göre henüz tamamlamadığın eğitimlerin varsa hala süren var. Son tarih 31 Mart!
+*Bu verilerde 27 Mart 2023 tarihi baz alınmıştır.
+AKADEMİ GAME & APP JAM'İ BAŞLIYOR!
+Tüm detaylar için duyurular kanalını takip et, sorularını Atıl Hoca'ya Cuma günü iletebileceksin
+*Lütfen sorular için Slack kanallarından bize ulaşın.''',
+                  style: TextStyle(color: Colors.white), ),
+              SizedBox(height: 16.0),
+              Align(
+                alignment: Alignment.centerRight,
+                child: Text('27/03/2023 04:42',
                     style: TextStyle(color: kLightColor)),
               )
             ],

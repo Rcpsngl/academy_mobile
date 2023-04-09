@@ -1,3 +1,4 @@
+import 'package:academy/notification/notificationPage.dart';
 import 'package:academy/screens/featured_screen.dart';
 import 'package:academy/screens/notification_screen.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
