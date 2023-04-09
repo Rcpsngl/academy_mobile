@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 const kPrimaryColor = Color(0xff6849ef);
@@ -33,7 +32,7 @@ const kMediumText = TextStyle(
     fontSize: 24);
 
 Widget kgeriTus = IconButton(
-    icon: Icon(Icons.arrow_back),
+    icon: const Icon(Icons.arrow_back),
     color: Colors.white,
     iconSize: 30,
     onPressed: () {});

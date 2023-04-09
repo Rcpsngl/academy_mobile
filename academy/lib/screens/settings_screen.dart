@@ -1,8 +1,5 @@
 import 'package:academy/constants/color.dart';
-import 'package:academy/widgets/custom_nav_bar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import '../models/setting.dart';
 import '../widgets/avatar_card.dart';
@@ -16,7 +13,7 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  int _selectedIndex = 0;
+  final int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {

@@ -18,7 +18,7 @@ class _FeaturedScreenState extends State<FeaturedScreen> {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
       child: Scaffold(
-        backgroundColor: Color(0xff102733),
+        backgroundColor: const Color(0xff102733),
         body: Column(
           children: const [
             AppBar(),
@@ -117,7 +117,7 @@ class CategoryCard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: Color(0xff29404E),
+          color: const Color(0xff29404E),
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
@@ -145,7 +145,7 @@ class CategoryCard extends StatelessWidget {
             Center(
               child: Text(
                 category.name,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 22, fontFamily: 'Poppins', color: Colors.white),
               ),
             ),
@@ -188,7 +188,7 @@ class AppBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 "OYUN VE UYGULAMA AKADEMİSİ",
                 style: TextStyle(
                     fontSize: 18,

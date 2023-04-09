@@ -19,7 +19,7 @@ class _CourseScreenState extends State<CourseScreen> {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.dark,
       child: Scaffold(
-        backgroundColor: Color(0xff102733),
+        backgroundColor: const Color(0xff102733),
         body: SafeArea(
           bottom: false,
           child: Padding(
@@ -30,7 +30,7 @@ class _CourseScreenState extends State<CourseScreen> {
                 IntrinsicHeight(
                   child: Stack(
                     children: [
-                      Align(
+                      const Align(
                         child: Center(
                           child: Text(
                             'Derslerim',
@@ -46,7 +46,7 @@ class _CourseScreenState extends State<CourseScreen> {
                         left: 5,
                         top: 10,
                         child: IconButton(
-                          icon: Icon(Icons.arrow_back),
+                          icon: const Icon(Icons.arrow_back),
                           color: Colors.white,
                           iconSize: 30,
                           onPressed: () {
@@ -105,7 +105,7 @@ class CourseContainer extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: Color(0xff29404E),
+          color: const Color(0xff29404E),
         ),
         padding: const EdgeInsets.all(10),
         child: Row(
@@ -127,7 +127,7 @@ class CourseContainer extends StatelessWidget {
                 children: [
                   Text(
                     course.name,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 18,
                         color: Colors.white,
@@ -135,7 +135,7 @@ class CourseContainer extends StatelessWidget {
                   ),
                   Text(
                     "Öğretmen ${course.ogretmen}",
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontFamily: 'Poppins-Medium',
                         fontSize: 14,
                         color: Colors.white,

@@ -14,7 +14,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
     return Scaffold(
       backgroundColor: kKoyuArkaplan,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(80.0),
+        preferredSize: const Size.fromHeight(80.0),
         child: AppBar(
           backgroundColor: kKoyuArkaplan,
           centerTitle: true,
@@ -24,15 +24,17 @@ class _NotificationScreenState extends State<NotificationScreen> {
         Container(
           // height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          margin: EdgeInsets.all(kFixPadding),
-          padding: EdgeInsets.all(kFixPadding),
+          margin: const EdgeInsets.all(kFixPadding),
+          padding: const EdgeInsets.all(kFixPadding),
           decoration: BoxDecoration(
               color: kAcikArkaplan,
               shape: BoxShape.rectangle,
               borderRadius: BorderRadius.circular(8.0),
-              boxShadow: [BoxShadow(color: kLightColor, blurRadius: 2.0)]),
+              boxShadow: const [
+                BoxShadow(color: kLightColor, blurRadius: 2.0)
+              ]),
           child: Column(
-            children: [
+            children: const [
               Text('Akademi Çağrı Hattı', style: kMediumText),
               SizedBox(height: 8.0),
               SizedBox(height: 8.0),
