@@ -32,7 +32,7 @@ https://user-images.githubusercontent.com/114760131/230795279-1d73b0bb-6eb7-43a7
 
 ### Teşekkürler
 
-06.04.2023-10.04.2023 tarihleri arasında gerçekleşen Oyun ve Uygulama Akademisi Game-App Jam sürencinde bize destek olan herkese teşekür ederiz
+06.04.2023-10.04.2023 tarihleri arasında gerçekleşen Oyun ve Uygulama Akademisi Game-App Jam sürencinde bize destek olan herkese teşekkür ederiz
 
 
 
